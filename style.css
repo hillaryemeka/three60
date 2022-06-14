@@ -1,0 +1,422 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+html, body, html * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  position: relative;
+  width: 1264px;
+  height: 817px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.column {
+  float: left;
+  width: 50%;
+  height: 817px;
+}
+.blue{
+  background-color: rgba(26, 77, 230, 0.81);
+}
+.word_container{
+  position: absolute;
+  height: 130px;
+  width: 339px;
+  left: 73px;
+  top: 204px;
+  font-family: Noto Sans;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+.bookmarks{
+  position: absolute;
+  width: 144px;
+  height: 105px;
+  left: 397px;
+  top: 380px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.bookmark_image_container{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 405px;
+  top: 415px;
+  border-radius: 50%;
+  background: rgba(70, 115, 228, 0.1);
+}
+.bookmark_img{
+  position: absolute;
+  height: 12.765625px;
+  width: 11.064422607421875px;
+  left: 415px;
+  top: 427px;
+}
+.bookmark_word{
+  position: absolute;
+  width: 84px;
+  height: 16px;
+  left: 451px;
+  top: 425px;
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #5F5F60;
+}
+.bookmark_circle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 420px;
+  top: 323px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.37)
+}
+.notes{
+  position: absolute;
+  width: 144px;
+  height: 105px;
+  left: 235px;
+  top: 380px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.notes_image_container{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 243px;
+  top: 415px;
+  border-radius: 50%;
+  background: rgba(70, 115, 228, 0.1);
+}
+.notes_img{
+  position: absolute;
+  left: 19.94%;
+  right: 78.85%;
+  top: 52.26%;
+  bottom: 46.17%;
+}
+.notes_word{
+  position: absolute;
+  width: 43px;
+  height: 16px;
+  left: 285px;
+  top: 425px;
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #5F5F60;
+}
+.notes_triangle{
+  position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 50px solid rgba(255, 255, 255, 0.39);
+  left: 257px;
+  top: 454px;
+}
+.todos{
+  position: absolute;
+  width: 144px;
+  height: 105px;
+  left: 73px;
+  top: 380px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.todos_image_container{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  left: 81px;
+  top: 415px;
+  border-radius: 50%;
+  background: rgba(70, 115, 228, 0.1);
+}
+.todos_img{
+  position: absolute;
+  left: 7.12%;
+  right: 91.67%;
+  top: 52.26%;
+  bottom: 46.17%;
+}
+img{
+  color:  #4673E4;
+}
+.todo_word{
+  position: absolute;
+  width: 46px;
+  height: 16px;
+  left: 127px;
+  top: 425px;
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+/* identical to box height */
+  color: #5F5F60;
+}
+.todos_angle{
+  position: absolute;
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid rgba(36, 104, 235, 0.81);
+  left: 169.86px;
+  top: 368px;
+ }
+.upper_circle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -27px;
+  top: -26px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
+              linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
+              rgba(133, 156, 217, 0.47)
+}
+.lower_circle{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -35px;
+  top: 717px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
+              linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)), 
+            rgba(133, 156, 217, 0.47);
+}
+.article{
+  position: absolute;
+  width: 456px;
+  height: 66px;
+  left: 85px;
+  top: 556px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157.6%;
+  /* or 22px */
+  color: #FFFFFF;
+}
+.white{
+  background-color: white;
+}
+.white_logo{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 772px;
+  top: 150px;
+  padding: 2px 2px 1px 3px;
+  border-radius: 50%;
+  background: #2468EB;
+}
+.three60{
+  position: absolute;
+  width: 94px;
+  height: 28px;
+  left: 832px;
+  top: 161px;
+ }
+#three60{
+  display: block;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2468EB;
+}
+.create_act{
+  position: absolute;
+  width: 181px;
+  height: 28px;
+  left: 776px;
+  top: 218px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+#email_label{
+  position: absolute;
+  width: 105px;
+  height: 16px;
+  left: 779px;
+  top: 274px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #7D8089;
+}
+::placeholder{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #C2C4CB;
+  padding-left: 10px;
+}
+#email{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  left: 779px;
+  top: 301px;
+   background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+}
+#pwd_label{
+  position: absolute;
+  width: 62px;
+  height: 16px;
+  left: 779px;
+  top: 364px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #7D8089;
+ }
+ #pwd{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  left: 779px;
+  top: 391px;
+  background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+ }
+ #confirm_pwd_label{
+  position: absolute;
+  width: 116px;
+  height: 16px;
+  left: 777px;
+  top: 452px;
+   font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+  color: #7D8089;
+ }
+ #confirm_pwd{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  left: 779px;
+  top: 479px;
+  background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+ }
+ #submit_btn{
+  position: absolute;
+  width: 384px;
+  height: 52px;
+  left: 779px;
+  top: 559px;
+  background: #2468EB;
+  border-radius: 3px;
+  color: white;
+  border: none;
+ }
+ #google_btn{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  left: 779px;
+  top: 635px;
+  background: rgba(36, 104, 235, 0.12);
+  border-radius: 3px;
+  cursor: pointer;
+  border: transparent;
+ }
+ #ggl_link{
+  position: absolute;
+  width: 130px;
+  height: 17px;
+  left: 925px;
+  top: 652px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+ }
+ a{
+  color: #2468EB;
+  text-decoration: none;
+ }
+ #google_img{
+  position: absolute;
+  left: 70.9%;
+  right: 27.92%;
+  top: 79.68%;
+  bottom: 19.46%;
+ }
+ #google_btn:hover, #submit_btn:hover, #confirm_pwd:hover, #pwd:hover, #email:hover{
+   border: 3px solid rgb(0, 153, 255);
+   transform: scale(1.01);
+ }
+ .sign_up{
+  position: absolute;
+  width: 275px;
+  height: 16px;
+  left: 772px;
+  top: 712px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+ }
+ .terms{
+  position: absolute;
+  width: 221px;
+  height: 16px;
+  left: 772px;
+  top: 756px;  
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #979BA9;
+ }
