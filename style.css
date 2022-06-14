@@ -343,7 +343,7 @@ img{
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
  }
- #submit_btn{
+ #signUp_btn{
   position: absolute;
   width: 384px;
   height: 52px;
@@ -390,11 +390,11 @@ img{
   top: 79.68%;
   bottom: 19.46%;
  }
- #google_btn:hover, #submit_btn:hover, #confirm_pwd:hover, #pwd:hover, #email:hover{
+ #google_btn:hover, #signUp_btn:hover, #confirm_pwd:hover, #pwd:hover, #email:hover, #signIn_btn:hover{
    border: 3px solid rgb(0, 153, 255);
    transform: scale(1.01);
  }
- .sign_up{
+ .sign_in{
   position: absolute;
   width: 275px;
   height: 16px;
@@ -419,4 +419,33 @@ img{
   font-size: 14px;
   line-height: 16px;
   color: #979BA9;
+ }
+ #signIn_btn{
+  position: absolute;
+  width: 384px;
+  height: 52px;
+  left: 777px;
+  top: 469px;
+  background: #2468EB;
+  border-radius: 3px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px; 
+  color: #FFFFFF;
+  border: none;
+ }
+ .sign_up{
+  position: absolute;
+  width: 275px;
+  height: 16px;
+  left: 777px;
+  top: 541px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
  }
