@@ -14,20 +14,32 @@
         <div class="word_container">
           Track how far you’ve gone
         </div>
-        <div class="bookmarks"> </div>
-        <div class="bookmark_image_container"> </div>
-        <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
-        <div class="bookmark_word">BOOKMARKS</div>
+        <div class="bookmarks"> 
+          <div class="bookmark_image_container"> 
+            <div class="bookmark_image_circle">
+              <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
+            </div>
+            <div class="bookmark_word">BOOKMARKS</div>
+          </div>
+        </div>
         <div class="bookmark_circle"></div>
-        <div class="notes"></div>
-        <div class="notes_image_container"> </div>
-        <div class="notes_img"><img src="images/Notes.png"></div>
-        <div class="notes_word">NOTES</div>
+        <div class="notes">
+          <div class="notes_image_container">
+            <div class="notes_image_circle">
+              <div class="notes_img"><img src="images/Notes.png"></div>
+            </div>
+            <div class="notes_word">NOTES</div>
+          </div>
+        </div>
         <div class="notes_triangle"></div>
-        <div class="todos"></div>
-        <div class="todos_image_container"> </div>
-        <div class="todos_img"><img src="images/Todo.png"></div>
-        <div class="todo_word">TODOS</div>
+        <div class="todos">
+          <div class="todos_image_container">
+            <div class="todos_image_circle">
+              <div class="todos_img"><img src="images/Todo.png"></div>
+            </div>
+            <div class="todo_word">TODOS</div>
+          </div>
+        </div>
         <div class="todos_angle"></div>
         <div class="upper_circle"></div>
         <div class="lower_circle"></div>
@@ -38,10 +50,10 @@
         <div class="three60"><span id="three60">three60</span></div>
         <div class="create_act">Create Account</div>
         <form action="">
-          <label for="email" id="email_label">Email/Username</label>
-          <input type="text" name="email" id="email" placeholder="email/username">
+          <label for="email" id="email_label">Email</label>
+          <input type="email" name="email" id="email" placeholder="email" required>
           <label for="password" id="pwd_label" >Password</label>
-          <input type="password" id="pwd" placeholder="Password">
+          <input type="password" id="pwd" placeholder="Password" required>
           <input type="submit" value="Sign In" id="signIn_btn">
         </form>
         <div class="sign_up">Don't have an account yet? <a href="index.html">Create account</a></div>

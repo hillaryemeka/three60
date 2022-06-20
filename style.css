@@ -4,27 +4,26 @@ html, body, html * {
 }
 
 .container{
-  position: relative;
-  width: 1264px;
-  height: 817px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   background: white;
-  border-radius: 10px;
   overflow: hidden;
 }
 .column {
   float: left;
-  width: 50%;
-  height: 817px;
+  width: 50vw;
+  height: 100vh;
 }
 .blue{
   background-color: rgba(26, 77, 230, 0.81);
 }
 .word_container{
   position: absolute;
-  height: 130px;
-  width: 339px;
-  left: 73px;
-  top: 204px;
+  height: 13vh;
+  width: 33.9vw;
+  left: 6.5vw;
+  top: 20.4vh;
   font-family: Noto Sans;
   font-size: 48px;
   font-weight: 600;
@@ -35,35 +34,36 @@ html, body, html * {
 }
 .bookmarks{
   position: absolute;
-  width: 144px;
-  height: 105px;
-  left: 397px;
-  top: 380px;
+  width: 11.5vw;
+  height: 17vh;
+  left: 32%;
+  top: 46%;
   background: #FFFFFF;
   border-radius: 5px;
 }
-.bookmark_image_container{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  left: 405px;
-  top: 415px;
+.bookmark_image_container, .notes_image_container, .todos_image_container{
+  display: flex;
+  align-items: center;
+  height: 17vh;
+  padding-left: 5%;
+}
+.bookmark_image_circle, .notes_image_circle, .todos_image_circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 32%;
   border-radius: 50%;
   background: rgba(70, 115, 228, 0.1);
 }
-.bookmark_img{
-  position: absolute;
-  height: 12.765625px;
-  width: 11.064422607421875px;
-  left: 415px;
-  top: 427px;
+.bookmark_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17vh;
 }
-.bookmark_word{
-  position: absolute;
-  width: 84px;
-  height: 16px;
-  left: 451px;
-  top: 425px;
+.bookmark_word, .notes_word, .todo_word{
+  padding-left: 5%;
   font-family: 'Quattrocento Sans';
   font-style: normal;
   font-weight: 700;
@@ -74,51 +74,21 @@ html, body, html * {
 }
 .bookmark_circle{
   position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 420px;
-  top: 323px;
+  width: 8%;
+  height: 16.5%;
+  left: 35vw;
+  top: 35.5vh;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.37)
 }
 .notes{
   position: absolute;
-  width: 144px;
-  height: 105px;
-  left: 235px;
-  top: 380px;
+  width: 11.5vw;
+  height: 17vh;
+  left: 19%;
+  top: 46%;
   background: #FFFFFF;
   border-radius: 5px;
-}
-.notes_image_container{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  left: 243px;
-  top: 415px;
-  border-radius: 50%;
-  background: rgba(70, 115, 228, 0.1);
-}
-.notes_img{
-  position: absolute;
-  left: 19.94%;
-  right: 78.85%;
-  top: 52.26%;
-  bottom: 46.17%;
-}
-.notes_word{
-  position: absolute;
-  width: 43px;
-  height: 16px;
-  left: 285px;
-  top: 425px;
-  font-family: 'Quattrocento Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  /* identical to box height */
-  color: #5F5F60;
 }
 .notes_triangle{
   position: absolute;
@@ -127,63 +97,30 @@ html, body, html * {
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	border-bottom: 50px solid rgba(255, 255, 255, 0.39);
-  left: 257px;
-  top: 454px;
+  left: 20.8%;
+  top: 58%;
 }
 .todos{
   position: absolute;
-  width: 144px;
-  height: 105px;
-  left: 73px;
-  top: 380px;
+  width: 11.5vw;
+  height: 17vh;
+  left: 6%;
+  top: 46%;
   background: #FFFFFF;
   border-radius: 5px;
-}
-.todos_image_container{
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  left: 81px;
-  top: 415px;
-  border-radius: 50%;
-  background: rgba(70, 115, 228, 0.1);
-}
-.todos_img{
-  position: absolute;
-  left: 7.12%;
-  right: 91.67%;
-  top: 52.26%;
-  bottom: 46.17%;
-}
-img{
-  color:  #4673E4;
-}
-.todo_word{
-  position: absolute;
-  width: 46px;
-  height: 16px;
-  left: 127px;
-  top: 425px;
-  font-family: 'Quattrocento Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-/* identical to box height */
-  color: #5F5F60;
 }
 .todos_angle{
   position: absolute;
   width: 0;
 	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-top: 50px solid rgba(36, 104, 235, 0.81);
-  left: 169.86px;
-  top: 368px;
+	border-left: 2vw solid transparent;
+	border-right: 2vw solid transparent;
+	border-top: 7vh solid rgba(36, 104, 235, 0.81);
+  left: 13%;
+  top: 46%;
  }
 .upper_circle{
-  position: absolute;
+  position:absolute;
   width: 100px;
   height: 100px;
   left: -27px;
@@ -198,7 +135,7 @@ img{
   width: 100px;
   height: 100px;
   left: -35px;
-  top: 717px;
+  top: 85vh;
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)), 
@@ -206,10 +143,9 @@ img{
 }
 .article{
   position: absolute;
-  width: 456px;
-  height: 66px;
-  left: 85px;
-  top: 556px;
+  width: 36%;
+  left: 6%;
+  top: 72%;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -223,53 +159,44 @@ img{
 }
 .white_logo{
   position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 772px;
-  top: 150px;
+  width: 3.5%;
+  height: 7.3%;
+  left: 60.3%;
+  top: 13%;
   padding: 2px 2px 1px 3px;
   border-radius: 50%;
   background: #2468EB;
 }
 .three60{
   position: absolute;
-  width: 94px;
-  height: 28px;
-  left: 832px;
-  top: 161px;
+  left: 64.9%;
+  top: 14.5%;
  }
 #three60{
   display: block;
   font-family: 'Rubik';
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 2vw;
   color: #2468EB;
 }
 .create_act{
   position: absolute;
-  width: 181px;
-  height: 28px;
-  left: 776px;
-  top: 218px;
+  left: 60.5%;
+  top: 23%;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 2vw;
   color: #000000;
 }
 #email_label{
   position: absolute;
-  width: 105px;
-  height: 16px;
-  left: 779px;
-  top: 274px;
+  left: 60.5%;
+  top: 32%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   text-align: right;
   color: #7D8089;
 }
@@ -285,82 +212,94 @@ img{
 #email{
   box-sizing: border-box;
   position: absolute;
-  width: 384px;
-  height: 50px;
-  left: 779px;
-  top: 301px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 36%;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
 }
+#email_msg{
+  position: absolute;
+  left: 60.5%;
+  top: 44%;
+  color: red;
+}
 #pwd_label{
   position: absolute;
-  width: 62px;
-  height: 16px;
-  left: 779px;
-  top: 364px;
+  left: 60.5%;
+  top: 46%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   text-align: right;
   color: #7D8089;
  }
  #pwd{
   box-sizing: border-box;
   position: absolute;
-  width: 384px;
-  height: 50px;
-  left: 779px;
-  top: 391px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 50%;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
  }
+ #pwd_msg{
+  position: absolute;
+  left: 60.5%;
+  top: 58%;
+  color: red;
+ }
  #confirm_pwd_label{
   position: absolute;
-  width: 116px;
-  height: 16px;
-  left: 777px;
-  top: 452px;
-   font-family: 'Roboto';
+  left: 60.5%;
+  top: 60%;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   text-align: right;
   color: #7D8089;
  }
  #confirm_pwd{
   box-sizing: border-box;
   position: absolute;
-  width: 384px;
-  height: 50px;
-  left: 779px;
-  top: 479px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 64%;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
  }
+ #confirm_pwd_msg{
+  position: absolute;
+  left: 60.5%;
+  top: 72%;
+  color: red;
+ }
  #signUp_btn{
   position: absolute;
-  width: 384px;
-  height: 52px;
-  left: 779px;
-  top: 559px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 74%;
   background: #2468EB;
   border-radius: 3px;
   color: white;
   border: none;
  }
- #google_btn{
+ .google_btn{
   box-sizing: border-box;
   position: absolute;
-  width: 384px;
-  height: 50px;
-  left: 779px;
-  top: 635px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 84%;
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
@@ -368,16 +307,12 @@ img{
  }
  #ggl_link{
   position: absolute;
-  width: 130px;
-  height: 17px;
-  left: 925px;
-  top: 652px;
+  left: 38%;
+  top: 35%;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  /* identical to box height */
+  font-size: 1.1vw;
  }
  a{
   color: #2468EB;
@@ -385,10 +320,9 @@ img{
  }
  #google_img{
   position: absolute;
-  left: 70.9%;
-  right: 27.92%;
-  top: 79.68%;
-  bottom: 19.46%;
+  left: 31%;
+  top: 35%;
+
  }
  #google_btn:hover, #signUp_btn:hover, #confirm_pwd:hover, #pwd:hover, #email:hover, #signIn_btn:hover{
    border: 3px solid rgb(0, 153, 255);
@@ -396,56 +330,61 @@ img{
  }
  .sign_in{
   position: absolute;
-  width: 275px;
-  height: 16px;
-  left: 772px;
-  top: 712px;
+  left: 60.5%;
+  top: 93%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   color: #000000;
  }
  .terms{
   position: absolute;
-  width: 221px;
-  height: 16px;
-  left: 772px;
-  top: 756px;  
+  left: 60.5%;
+  top: 97%;  
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   color: #979BA9;
  }
  #signIn_btn{
   position: absolute;
-  width: 384px;
-  height: 52px;
-  left: 777px;
-  top: 469px;
+  width: 30%;
+  height: 8%;
+  left: 60.5%;
+  top: 60%;
   background: #2468EB;
   border-radius: 3px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px; 
+  font-size: 1.1vw;
   color: #FFFFFF;
   border: none;
  }
  .sign_up{
   position: absolute;
-  width: 275px;
-  height: 16px;
-  left: 777px;
-  top: 541px;
+  left: 60.5%;
+  top: 71%;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.1vw;
   color: #000000;
+ }
+ input:valid{
+  border: 1px solid black;
+ }
+ input:invalid{
+  border: 1px solid dashed red;
+  background-color: yellow;
+ }
+ #success{
+  color: rgba(60, 216, 60, 0.555);
+  font-family: 'Rubik';
+  font-weight: 500;
+  position: absolute;
+  left: 60.5%;
+  top: 7.5%;
  }
