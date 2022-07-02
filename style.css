@@ -215,7 +215,7 @@ body{
 }
 #first_name_label{
   position: absolute;
-  top: 120px;
+  top: 110px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -227,20 +227,20 @@ body{
   box-sizing: border-box;
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 143px;
+  height: 40px;
+  top: 130px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
 }
 #first_name_msg{
   position: absolute;
-  top: 193px;
+  top: 169px;
   color: red;
 }
 #last_name_label{
   position: absolute;
-  top: 207px;
+  top: 183px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -252,20 +252,20 @@ body{
   box-sizing: border-box;
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 229px;
+  height: 40px;
+  top: 205px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
 }
 #last_name_msg{
   position: absolute;
-  top: 280px;
+  top: 246px;
   color: red;
 }
 #email_label{
   position: absolute;
-  top: 293px;
+  top: 259px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -277,20 +277,20 @@ body{
   box-sizing: border-box;
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 313px;
+  height: 40px;
+  top: 279px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
 }
 #email_msg{
   position: absolute;
-  top: 361px;
+  top: 317px;
   color: red;
 }
 #pwd_label{
   position: absolute;
-  top: 376px;
+  top: 331px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -302,23 +302,47 @@ body{
   box-sizing: border-box;
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 392px;
+  height: 40px;
+  top: 348px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
  }
  #pwd_msg{
   position: absolute;
-  top: 440px;
+  top: 386px;
   color: red;
  }
- 
+ #confirmPwd_label{
+  position: absolute;
+  top: 396px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+ }
+ #confirmPwd{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 40px;
+  top: 416px;
+   background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+}
+#confirmPwd_msg{
+  position: absolute;
+  top: 452px;
+  color: red;
+ }
  #signUp_btn{
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 453px;
+  height: 40px;
+  top: 465px;
   background: #2468EB;
   border-radius: 3px;
   color: white;
@@ -328,8 +352,8 @@ body{
   box-sizing: border-box;
   position: absolute;
   width: 384px;
-  height: 50px;
-  top: 505px;
+  height: 40px;
+  top: 510px;
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
@@ -355,13 +379,13 @@ body{
 
  }
  #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
- #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover{
+ #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover,#confirmPwd:hover {
    border: 3px solid rgb(0, 153, 255);
    transform: scale(1.01);
  }
  .sign_in{
   position: absolute;
-  top: 553px;
+  top: 550px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;

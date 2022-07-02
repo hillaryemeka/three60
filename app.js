@@ -12,6 +12,8 @@ let signInEmail = document.getElementById("signIn_email")
 let signInPwd = document.getElementById("signIn_pwd")
 let signInEmailMsg = document.getElementById("signIn_email_msg")
 let signInPwdMsg = document.getElementById("signIn_pwd_msg")
+let confirmPwd = document.getElementById('confirmPwd')
+let confirmPwdMsg = document.getElementById('confirmPwd_msg')
 
 function signup(event){
   event.preventDefault()
@@ -43,15 +45,34 @@ function signup(event){
   } else {
     password.style.borderColor = "green"
     pwd_msg.innerText = ""
+  }
+  if (confirmPwd.value === ""){
+    confirmPwdMsg.innerText = "Please confirm your password"
+    confirmPwd.style.borderColor = "red"
+  }else if (confirmPwd.value !== password.value){
+    confirmPwdMsg.innerText = "Password doesn't match"
+    confirmPwd.style.borderColor = "red"
+  }else{
+    confirmPwd.style.borderColor = "green"
+    confirmPwdMsg.innerText = ""
     submitForm()
   }
   
   function submitForm(){
   let formData = new FormData(signUpForm)
-  console.log([...formData])
+  const userObject = {
+    firstName: formData.get('firstName'),
+    lastName: formData.get('lastName'),
+    email: formData.get('email'),
+    password: formData.get('password'),
+    confirmPassword: formData.get('confirmPassword')
+  }
   fetch('https://my-diary-dev.herokuapp.com/auth/signup', {
+    headers: {
+      'Content-Type': 'Application/json'
+    },
     method: 'POST',
-    body: formData
+    body: JSON.stringify(userObject)
   })
     .then(res => res.json())
     .then(data => console.log(data))
@@ -80,9 +101,16 @@ function signIn(event){
 
 function sign_in(){
   let data = new FormData(signInForm)
+  const userObj = {
+    email: data.get('email'),
+    password: data.get('password'),
+  }
   fetch('https://my-diary-dev.herokuapp.com/auth/login', {
+    headers: {
+      'Content-Type': 'Application/json'
+    },
     method: "POST",
-    body: data
+    body: JSON.stringify(userObj)
   })
     .then(response => response.json())
     .then(items => console.log(items))

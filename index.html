@@ -57,10 +57,10 @@
           <div class="create_act">Create Account</div>
           <form id="signUpForm" method="POST" onsubmit="signup(event)">
             <label for="first_name" id="first_name_label">First Name</label>
-            <input type="text" name="firstaname" id="first_name" placeholder="first_name">
+            <input type="text" name="firstName" id="first_name" placeholder="first_name">
             <small id="first_name_msg"></small>
             <label for="last_name" id="last_name_label">Last Name</label>
-            <input type="text" name="last_name" id="last_name" placeholder="last_name">
+            <input type="text" name="lastName" id="last_name" placeholder="last_name">
             <small id="last_name_msg"></small>
             <label for="email" id="email_label">Email</label>
             <input type="email" name="email" id="email" placeholder="email">
@@ -68,6 +68,9 @@
             <label for="password" id="pwd_label" >Password</label>
             <input type="password" name="password" id="pwd" placeholder="Password">
             <small id="pwd_msg"></small>
+            <label for="confirmPassword" id="confirmPwd_label" > Confirm Password</label>
+            <input type="password" name="confirmPassword" id="confirmPwd" placeholder="Confirm Password">
+            <small id="confirmPwd_msg"></small>
             <input type="submit" value="Sign Up" id="signUp_btn">
           </form>
           <div class="google_btn">
