@@ -10,55 +10,64 @@
   </head>
   <body>
     <div  class="container">
-      <div class="column blue">      </div>
-        <div class="word_container">
-          Track how far you’ve gone
-        </div>
-        <div class="bookmarks"> 
-          <div class="bookmark_image_container"> 
-            <div class="bookmark_image_circle">
-              <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
-            </div>
-            <div class="bookmark_word">BOOKMARKS</div>
+      <div class="column blue"> 
+        <div class="blue_container">
+          <div class="word_container">
+            Track how far you’ve gone
           </div>
-        </div>
-        <div class="bookmark_circle"></div>
-        <div class="notes">
-          <div class="notes_image_container">
-            <div class="notes_image_circle">
-              <div class="notes_img"><img src="images/Notes.png"></div>
+          <div class="bookmarks"> 
+            <div class="bookmark_image_container"> 
+              <div class="bookmark_image_circle">
+                <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
+              </div>
+              <div class="bookmark_word">BOOKMARKS</div>
             </div>
-            <div class="notes_word">NOTES</div>
           </div>
-        </div>
-        <div class="notes_triangle"></div>
-        <div class="todos">
-          <div class="todos_image_container">
-            <div class="todos_image_circle">
-              <div class="todos_img"><img src="images/Todo.png"></div>
+          <div class="bookmark_circle"></div>
+          <div class="notes">
+            <div class="notes_image_container">
+              <div class="notes_image_circle">
+                <div class="notes_img"><img src="images/Notes.png"></div>
+              </div>
+              <div class="notes_word">NOTES</div>
             </div>
-            <div class="todo_word">TODOS</div>
           </div>
-        </div>
-        <div class="todos_angle"></div>
+          <div class="notes_triangle"></div>
+          <div class="todos">
+            <div class="todos_image_container">
+              <div class="todos_image_circle">
+                <div class="todos_img"><img src="images/Todo.png"></div>
+              </div>
+              <div class="todo_word">TODOS</div>
+            </div>
+          </div>
+          <div class="todos_angle"></div>
+          <div class="article">Sit nisi incididunt tempor do duis fugiat proident excepteur. 
+            Ex elit pariatur incididunt nostrud occaecat mollit id occaecat. Voluptate adipisicing commodo. </div>
+        </div>  
         <div class="upper_circle"></div>
-        <div class="lower_circle"></div>
-        <div class="article">Sit nisi incididunt tempor do duis fugiat proident excepteur. 
-          Ex elit pariatur incididunt nostrud occaecat mollit id occaecat. Voluptate adipisicing commodo. </div>
+        <div class="lower_circle"></div>   
+      </div>
+
       <div class="column white">
-        <div class="white_logo"> <img src="images/three60.png"></div>
-        <div class="three60"><span id="three60">three60</span></div>
-        <div class="create_act">Create Account</div>
-        <form action="">
-          <label for="email" id="email_label">Email</label>
-          <input type="email" name="email" id="email" placeholder="email" required>
-          <label for="password" id="pwd_label" >Password</label>
-          <input type="password" id="pwd" placeholder="Password" required>
-          <input type="submit" value="Sign In" id="signIn_btn">
-        </form>
-        <div class="sign_up">Don't have an account yet? <a href="index.html">Create account</a></div>
+        <div class="white_container">
+          <div class="white_logo"> <img src="images/three60.png"></div>
+          <div class="three60"><span id="three60">three60</span></div>
+          <div class="create_act">Sign In</div>
+          <form action="" id="signInForm" method="POST" onsubmit="signIn(event)">
+            <label for="email" id="signIn_email_label">Email</label>
+            <input type="email" name="email" id="signIn_email" placeholder="email" >
+            <small id="signIn_email_msg"></small>
+            <label for="password" id="signIn_pwd_label" >Password</label>
+            <input type="password" id="signIn_pwd" placeholder="Password" >
+            <small id="signIn_pwd_msg"></small>
+            <input type="submit" value="Sign In" id="signIn_btn">
+          </form>
+          <div class="sign_up">Don't have an account yet? <a href="index.html">Create account</a></div>
+        </div>
         <div class="terms">Privacy Policy and Terms of Service</div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

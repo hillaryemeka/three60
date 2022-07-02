@@ -22,41 +22,46 @@ body{
 .blue{
   background-color: rgba(26, 77, 230, 0.81);
 }
+.blue_container{
+  position: absolute;
+  left: 6.5vw;
+  width: 486px;
+  height: 418px;
+  top: 20.4vh;
+}
 .word_container{
   position: absolute;
-  height: 13vh;
-  width: 33.9vw;
-  left: 6.5vw;
-  top: 20.4vh;
+  width: 339px;
+  height: 130px;
   font-family: Noto Sans;
   font-size: 48px;
   font-weight: 600;
   line-height: 65px;
-  letter-spacing: 0em;
+  font-style: normal;
   text-align: left;
   color: #FFFFFF;
 }
 .bookmarks{
   position: absolute;
-  width: 11.5vw;
-  height: 17vh;
-  left: 32%;
-  top: 46%;
+  width: 144px;
+  height: 105px;
+  left: 324px;
+  top: 155px;
   background: #FFFFFF;
   border-radius: 5px;
 }
 .bookmark_image_container, .notes_image_container, .todos_image_container{
   display: flex;
   align-items: center;
-  height: 17vh;
+  height: 105px;
   padding-left: 5%;
 }
 .bookmark_image_circle, .notes_image_circle, .todos_image_circle{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
-  height: 32%;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   background: rgba(70, 115, 228, 0.1);
 }
@@ -64,7 +69,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 17vh;
+  height: 105px;
 }
 .bookmark_word, .notes_word, .todo_word{
   padding-left: 5%;
@@ -78,19 +83,19 @@ body{
 }
 .bookmark_circle{
   position: absolute;
-  width: 8%;
-  height: 16.5%;
-  left: 35vw;
-  top: 35.5vh;
+  width: 100px;
+  height: 100px;
+  left: 347px;
+  top: 98px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.37)
 }
 .notes{
   position: absolute;
-  width: 11.5vw;
-  height: 17vh;
-  left: 19%;
-  top: 46%;
+  width: 144px;
+  height: 105px;
+  left: 162px;
+  top: 155px;
   background: #FFFFFF;
   border-radius: 5px;
 }
@@ -101,15 +106,15 @@ body{
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	border-bottom: 50px solid rgba(255, 255, 255, 0.39);
-  left: 20.8%;
-  top: 58%;
+  left: 182px;
+  top: 225px;
 }
 .todos{
   position: absolute;
-  width: 11.5vw;
-  height: 17vh;
-  left: 6%;
-  top: 46%;
+  width: 144px;
+  height: 105px;
+  left: 0px;
+  top: 155px;
   background: #FFFFFF;
   border-radius: 5px;
 }
@@ -120,8 +125,8 @@ body{
 	border-left: 2vw solid transparent;
 	border-right: 2vw solid transparent;
 	border-top: 7vh solid rgba(36, 104, 235, 0.81);
-  left: 13%;
-  top: 46%;
+  left: 84px;
+  top: 155px;
  }
 .upper_circle{
   position:absolute;
@@ -147,62 +152,57 @@ body{
 }
 .article{
   position: absolute;
-  width: 36%;
-  left: 6%;
-  top: 72%;
+  width: 456px;
+  height: 66px;
+  top: 352px;
+  left: 12px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 157.6%;
   /* or 22px */
   color: #FFFFFF;
 }
 .white{
   background-color: white;
 }
-.white_logo{
+.white_container{
   position: absolute;
-  width: 3.5%;
-  height: 7.3%;
+  width: 384px;
+  height: 560px;
   left: 60.3%;
-  top: 13%;
+  top: 5%;
+}
+.white_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
   padding: 2px 2px 1px 3px;
   border-radius: 50%;
   background: #2468EB;
 }
 .three60{
   position: absolute;
-  left: 64.9%;
-  top: 14.5%;
+  left: 60px;
+  top: 11px;
  }
 #three60{
   display: block;
   font-family: 'Rubik';
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 24px;
   color: #2468EB;
 }
 .create_act{
   position: absolute;
-  left: 60.5%;
-  top: 23%;
+  top: 68px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 24px;
   color: #000000;
-}
-#email_label{
-  position: absolute;
-  left: 60.5%;
-  top: 32%;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.1vw;
-  text-align: right;
-  color: #7D8089;
 }
 ::placeholder{
   font-family: 'Roboto';
@@ -213,85 +213,112 @@ body{
   color: #C2C4CB;
   padding-left: 10px;
 }
+#first_name_label{
+  position: absolute;
+  top: 120px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+}
+#first_name{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  top: 143px;
+   background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+}
+#first_name_msg{
+  position: absolute;
+  top: 193px;
+  color: red;
+}
+#last_name_label{
+  position: absolute;
+  top: 207px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+}
+#last_name{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  top: 229px;
+   background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+}
+#last_name_msg{
+  position: absolute;
+  top: 280px;
+  color: red;
+}
+#email_label{
+  position: absolute;
+  top: 293px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+}
 #email{
   box-sizing: border-box;
   position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 36%;
+  width: 384px;
+  height: 50px;
+  top: 313px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
 }
 #email_msg{
   position: absolute;
-  left: 60.5%;
-  top: 44%;
+  top: 361px;
   color: red;
 }
 #pwd_label{
   position: absolute;
-  left: 60.5%;
-  top: 46%;
+  top: 376px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  font-size: 1.1vw;
+  font-size: 14px;
   text-align: right;
   color: #7D8089;
  }
  #pwd{
   box-sizing: border-box;
   position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 50%;
+  width: 384px;
+  height: 50px;
+  top: 392px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
   border-radius: 3px;
  }
  #pwd_msg{
   position: absolute;
-  left: 60.5%;
-  top: 58%;
+  top: 440px;
   color: red;
  }
- #confirm_pwd_label{
-  position: absolute;
-  left: 60.5%;
-  top: 60%;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.1vw;
-  text-align: right;
-  color: #7D8089;
- }
- #confirm_pwd{
-  box-sizing: border-box;
-  position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 64%;
-  background: rgba(36, 104, 235, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
- }
- #confirm_pwd_msg{
-  position: absolute;
-  left: 60.5%;
-  top: 72%;
-  color: red;
- }
+ 
  #signUp_btn{
   position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 74%;
+  width: 384px;
+  height: 50px;
+  top: 453px;
   background: #2468EB;
   border-radius: 3px;
   color: white;
@@ -300,10 +327,9 @@ body{
  .google_btn{
   box-sizing: border-box;
   position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 84%;
+  width: 384px;
+  height: 50px;
+  top: 505px;
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
@@ -316,7 +342,7 @@ body{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.1vw;
+  font-size: 14px;
  }
  a{
   color: #2468EB;
@@ -328,18 +354,18 @@ body{
   top: 35%;
 
  }
- #google_btn:hover, #signUp_btn:hover, #confirm_pwd:hover, #pwd:hover, #email:hover, #signIn_btn:hover{
+ #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
+ #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover{
    border: 3px solid rgb(0, 153, 255);
    transform: scale(1.01);
  }
  .sign_in{
   position: absolute;
-  left: 60.5%;
-  top: 93%;
+  top: 553px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.1vw;
+  font-size: 14px;
   color: #000000;
  }
  .terms{
@@ -352,12 +378,61 @@ body{
   font-size: 1.1vw;
   color: #979BA9;
  }
+ #signIn_email_label{
+  position: absolute;
+  top: 118px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+}
+#signIn_email{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  top: 137px;
+   background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+}
+#signIn_email_msg{
+  position: absolute;
+  top: 185px;
+  color: red;
+}
+#signIn_pwd_label{
+  position: absolute;
+  top: 207px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: right;
+  color: #7D8089;
+ }
+ #signIn_pwd{
+  box-sizing: border-box;
+  position: absolute;
+  width: 384px;
+  height: 50px;
+  top: 227px;
+  background: rgba(36, 104, 235, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 3px;
+ }
+ #signIn_pwd_msg{
+  position: absolute;
+  top: 277px;
+  color: red;
+ }
  #signIn_btn{
   position: absolute;
-  width: 30%;
-  height: 8%;
-  left: 60.5%;
-  top: 60%;
+  width: 384px;
+  height: 50px;
+  top: 300px;
   background: #2468EB;
   border-radius: 3px;
   font-family: 'Roboto';
@@ -369,26 +444,11 @@ body{
  }
  .sign_up{
   position: absolute;
-  left: 60.5%;
-  top: 71%;
+  top: 355px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 1.1vw;
+  font-size: 14px;
   color: #000000;
  }
- input:valid{
-  border: 1px solid black;
- }
- input:invalid{
-  border: 1px solid dashed red;
-  background-color: yellow;
- }
- #success{
-  color: #2468EB;
-  font-family: 'Rubik';
-  font-weight: 500;
-  position: absolute;
-  left: 60.5%;
-  top: 7.5%;
- }
+

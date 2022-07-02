@@ -10,63 +10,72 @@
   </head>
   <body>
     <div  class="container">
-      <div class="column blue">      </div>
-        <div class="word_container">
-          Track how far you’ve gone
-        </div>
-        <div class="bookmarks"> 
-          <div class="bookmark_image_container"> 
-            <div class="bookmark_image_circle">
-              <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
-            </div>
-            <div class="bookmark_word">BOOKMARKS</div>
+
+      <div class="column blue"> 
+        <div class="blue_container">
+          <div class="word_container">
+            Track how far you’ve gone
           </div>
-        </div>
-        <div class="bookmark_circle"></div>
-        <div class="notes">
-          <div class="notes_image_container">
-            <div class="notes_image_circle">
-              <div class="notes_img"><img src="images/Notes.png"></div>
+          <div class="bookmarks"> 
+            <div class="bookmark_image_container"> 
+              <div class="bookmark_image_circle">
+                <div class="bookmark_img"><img src="images/Bookmarks.png"></div>
+              </div>
+              <div class="bookmark_word">BOOKMARKS</div>
             </div>
-            <div class="notes_word">NOTES</div>
           </div>
-        </div>
-        <div class="notes_triangle"></div>
-        <div class="todos">
-          <div class="todos_image_container">
-            <div class="todos_image_circle">
-              <div class="todos_img"><img src="images/Todo.png"></div>
+          <div class="bookmark_circle"></div>
+          <div class="notes">
+            <div class="notes_image_container">
+              <div class="notes_image_circle">
+                <div class="notes_img"><img src="images/Notes.png"></div>
+              </div>
+              <div class="notes_word">NOTES</div>
             </div>
-            <div class="todo_word">TODOS</div>
           </div>
-        </div>
-        <div class="todos_angle"></div>
+          <div class="notes_triangle"></div>
+          <div class="todos">
+            <div class="todos_image_container">
+              <div class="todos_image_circle">
+                <div class="todos_img"><img src="images/Todo.png"></div>
+              </div>
+              <div class="todo_word">TODOS</div>
+            </div>
+          </div>
+          <div class="todos_angle"></div>
+          <div class="article">Sit nisi incididunt tempor do duis fugiat proident excepteur. 
+            Ex elit pariatur incididunt nostrud occaecat mollit id occaecat. Voluptate adipisicing commodo. </div>
+        </div>  
         <div class="upper_circle"></div>
-        <div class="lower_circle"></div>
-        <div class="article">Sit nisi incididunt tempor do duis fugiat proident excepteur. 
-          Ex elit pariatur incididunt nostrud occaecat mollit id occaecat. Voluptate adipisicing commodo. </div>
+        <div class="lower_circle"></div>   
+      </div>
+
       <div class="column white">
-        <div id="success"></div>
-        <div class="white_logo"> <img src="images/three60.png"></div>
-        <div class="three60"><span id="three60">three60</span></div>
-        <div class="create_act">Create Account</div>
-        <form action="" id="form" method="GET">
-          <label for="email" id="email_label">Email</label>
-          <input type="email" name="email" id="email" placeholder="email">
-          <small id="email_msg"></small>
-          <label for="password" id="pwd_label" >Password</label>
-          <input type="password" id="pwd" placeholder="Password">
-          <small id="pwd_msg"></small>
-          <label for="confirm_pwd" id="confirm_pwd_label">Confirm Password</label>
-          <input type="password" id="confirm_pwd" placeholder="Confirm Password">
-          <small id="confirm_pwd_msg"></small>
-          <input type="submit" value="Sign Up" id="signUp_btn">
-        </form>
-        <div class="google_btn">
-          <a href="#" id="ggl_link">Sign up with Google</a>
-          <img src="images/google.png" id="google_img"> 
+        <div class="white_container">
+          <div class="white_logo"> <img src="images/three60.png"></div>
+          <div class="three60"><span id="three60">three60</span></div>
+          <div class="create_act">Create Account</div>
+          <form id="signUpForm" method="POST" onsubmit="signup(event)">
+            <label for="first_name" id="first_name_label">First Name</label>
+            <input type="text" name="firstaname" id="first_name" placeholder="first_name">
+            <small id="first_name_msg"></small>
+            <label for="last_name" id="last_name_label">Last Name</label>
+            <input type="text" name="last_name" id="last_name" placeholder="last_name">
+            <small id="last_name_msg"></small>
+            <label for="email" id="email_label">Email</label>
+            <input type="email" name="email" id="email" placeholder="email">
+            <small id="email_msg"></small>
+            <label for="password" id="pwd_label" >Password</label>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+            <small id="pwd_msg"></small>
+            <input type="submit" value="Sign Up" id="signUp_btn">
+          </form>
+          <div class="google_btn">
+            <a href="#" id="ggl_link">Sign up with Google</a>
+            <img src="images/google.png" id="google_img"> 
+          </div>
+          <div class="sign_in">Already have an account? <a href="sign_in.html">Sign in</a></div>
         </div>
-        <div class="sign_in">Already have an account? <a href="sign_in.html">Sign in</a></div>
         <div class="terms">Privacy Policy and Terms of Service</div>
       </div>
     </div>

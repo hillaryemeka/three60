@@ -1,15 +1,35 @@
+let firstName = document.getElementById("first_name")
+let firstNameMsg = document.getElementById("first_name_msg")
+let lastNameMsg = document.getElementById("last_name_msg")
+let lastName = document.getElementById("last_name")
 let password = document.getElementById("pwd")
-let confirm_pwd = document.getElementById("confirm_pwd")
 let email_msg = document.getElementById("email_msg")
 let pwd_msg = document.getElementById("pwd_msg")
-let check_pwd = document.getElementById("confirm_pwd_msg")
-let form = document.getElementById("form")
+let signUpForm = document.getElementById("signUpForm")
+let signInForm = document.getElementById("signInForm")
 let email = document.getElementById("email")
-let success = document.getElementById("success")
+let signInEmail = document.getElementById("signIn_email")
+let signInPwd = document.getElementById("signIn_pwd")
+let signInEmailMsg = document.getElementById("signIn_email_msg")
+let signInPwdMsg = document.getElementById("signIn_pwd_msg")
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
-
+function signup(event){
+  event.preventDefault()
+      
+  if (firstName.value === ""){
+    firstNameMsg.innerText = "Please Enter your first name"
+    firstName.style.borderColor = "red"
+  }else{
+    firstNameMsg.innerText = ""
+    firstName.style.borderColor = "green"
+  }
+  if (lastName.value === ""){
+    lastNameMsg.innerText = "Please Enter your last name"
+    lastName.style.borderColor = "red"
+  }else{
+    lastNameMsg.innerText = ""
+    lastName.style.borderColor = "green"
+  }
   if (email.value === ""){
     email_msg.innerText = "Please the email cannot be empty"
     email.style.borderColor = "red"
@@ -17,31 +37,53 @@ form.addEventListener('submit', (e) => {
     email_msg.innerText = ""
     email.style.borderColor = "green"
   }
-
   if (password.value === ""){
     pwd_msg.innerText = "Please the password cannot be empty"
     password.style.borderColor = "red" 
   } else {
     password.style.borderColor = "green"
     pwd_msg.innerText = ""
+    submitForm()
   }
+  
+  function submitForm(){
+  let formData = new FormData(signUpForm)
+  console.log([...formData])
+  fetch('https://my-diary-dev.herokuapp.com/auth/signup', {
+    method: 'POST',
+    body: formData
+  })
+    .then(res => res.json())
+    .then(data => console.log(data))
+  }
+}
 
-  if (confirm_pwd.value === ""){
-    check_pwd.innerText = "Please confirm your password"
-    confirm_pwd.style.borderColor = "red" 
-  } else if (confirm_pwd.value !== password.value) {
-    check_pwd.innerText = "Password doesn't match"
-    confirm_pwd.style.borderColor = "red" 
+function signIn(event){
+  event.preventDefault()
+
+  if (signInEmail.value === ""){
+    signInEmailMsg.innerText = "Please the email cannot be empty"
+    signInEmail.style.borderColor = "red"
+  }else{
+    signInEmailMsg.innerText = ""
+    signInEmail.style.borderColor = "green"
+  }
+  if (signInPwd.value === ""){
+    signInPwdMsg.innerText = "Please the password cannot be empty"
+    signInPwd.style.borderColor = "red" 
   } else {
-    confirm_pwd.style.borderColor = "green"
-    check_pwd.innerText = ""
-    success.innerHTML = "Congratulations your account has been created"
-    resetInputs()
+    signInPwd.style.borderColor = "green"
+    signInPwdMsg.innerText = ""
+    sign_in()
   }
-})
+}
 
-function resetInputs(){
-  confirm_pwd.value = ""
-  password.value = ""
-  email.value = ""
+function sign_in(){
+  let data = new FormData(signInForm)
+  fetch('https://my-diary-dev.herokuapp.com/auth/login', {
+    method: "POST",
+    body: data
+  })
+    .then(response => response.json())
+    .then(items => console.log(items))
 }
