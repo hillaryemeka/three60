@@ -75,7 +75,10 @@ function signup(event){
     body: JSON.stringify(userObject)
   })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => {
+      if (data.status === "success")
+        window.location="home.html"
+    })
   }
 }
 
@@ -113,5 +116,11 @@ function sign_in(){
     body: JSON.stringify(userObj)
   })
     .then(response => response.json())
-    .then(items => console.log(items))
+    .then(items => {
+      if (items.status === "success"){
+        window.location="home.html"
+      } else {
+        alert("Email or password is incorect")
+      }
+    })
 }
