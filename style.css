@@ -2,7 +2,6 @@
 html, body, html * {
   font-family: 'Roboto', sans-serif;
 }
-
 body{
   margin: 0;
   padding: 0;
@@ -476,5 +475,31 @@ body{
   color: #000000;
  }
 #home{
-  background-color: grey;
+  background-color: white;
+}
+nav{
+  margin-top: 10px;
+  margin-left: 59px;
+}
+#home_three60{
+  display: block;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 24px;
+  color: #2468EB;
+  top: 11px;
+  left: 60px;
+  position: absolute;
+}
+#home_todo_block1{
+  position: absolute;
+  left: 248px;
+  top: 25px;
+}
+#home_todo_block2{
+  position: absolute;
+  left: 248px;
+  top: 29px;
+  margin-right: 10px;
+  color: blue;
 }
