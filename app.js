@@ -14,6 +14,7 @@ let signInEmailMsg = document.getElementById("signIn_email_msg")
 let signInPwdMsg = document.getElementById("signIn_pwd_msg")
 let confirmPwd = document.getElementById('confirmPwd')
 let confirmPwdMsg = document.getElementById('confirmPwd_msg')
+let userAccount = document.getElementById('userAcount')
 
 function signup(event){
   event.preventDefault()
@@ -77,7 +78,9 @@ function signup(event){
     .then(res => res.json())
     .then(data => {
       if (data.status === "success")
-        window.location="home.html"
+      localStorage.setItem("token", data.token)
+      localStorage.setItem("user", JSON.stringify(data.user))
+      window.location="home.html"
     })
   }
 }
@@ -103,11 +106,12 @@ function signIn(event){
 }
 
 function sign_in(){
-  let data = new FormData(signInForm)
+  let formdata = new FormData(signInForm)
   const userObj = {
-    email: data.get('email'),
-    password: data.get('password'),
+    email: formdata.get('email'),
+    password: formdata.get('password'),
   }
+
   fetch('https://my-diary-dev.herokuapp.com/auth/login', {
     headers: {
       'Content-Type': 'Application/json'
@@ -116,11 +120,23 @@ function sign_in(){
     body: JSON.stringify(userObj)
   })
     .then(response => response.json())
-    .then(items => {
-      if (items.status === "success"){
+    .then(data => {
+      if (data.status === "success"){
+        localStorage.setItem("token", data.token)
+        localStorage.setItem("user", JSON.stringify(data.user))
         window.location="home.html"
       } else {
         alert("Email or password is incorect")
       }
     })
 }
+
+function checkLogin() {
+  const user = JSON.parse(localStorage.getItem("user"))
+  const token = localStorage.getItem("token")
+  if (user && token ){
+    window.location.href = "home.html"
+  }
+}
+
+checkLogin()

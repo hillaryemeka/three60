@@ -503,3 +503,18 @@ nav{
   margin-right: 10px;
   color: blue;
 }
+#userAcount_div{
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  font-family: 'Rubik';
+  color: #2468EB;
+  font-weight: 400;
+  font-size: 20px;
+}
+#userAcount{
+  font-family: 'Rubik';
+  color: #2468EB;
+  font-weight: 400;
+  font-size: 20px;
+}
