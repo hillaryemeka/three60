@@ -172,6 +172,19 @@ body{
   left: 60.3%;
   top: 5%;
 }
+.hiding{
+  display: none;
+}
+.show{
+  position: absolute;
+  display: block;
+  left: 60.3%;
+  top: 2%;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 16px;
+  color: #2468EB;
+}
 .white_logo{
   display: flex;
   justify-content: center;
@@ -521,6 +534,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  cursor: pointer;
 }
 #todo, #links, #note{
   position: absolute;
@@ -541,6 +555,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  cursor: pointer;
 }
 #home_links_block{
   position: absolute;
@@ -552,6 +567,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  cursor: pointer;
 }
 #search{
   position: absolute;
@@ -646,10 +662,72 @@ nav{
 }
 #open_todos{
   position: absolute;
-  width: 30%;
+  width: 28%;
   height: 100%;
   right: 0px;
   background-color: white;
+}
+#inProgressCount_div{
+  position: absolute;
+  top: 120px;
+  width: 100%;
+}
+#inProgressCount{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #4673E4;
+  left: 20px;
+  color: white;
+}
+#inProgressCountWord{
+  position: absolute;
+  left: 50px;
+  width: 95px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;  
+  color: #4673E4;
+}
+#inProgressCountImg{
+  position: absolute;
+  right: 100px;
+}
+#inProgresheading{
+  position: absolute;
+  left: 20px;
+  top: 160px;
+  width: 309px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;  
+  color: #555555;  
+}
+#inProgresDetails{
+  position: absolute;
+  left: 20px;
+  width: 304px;
+  top: 290px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;  
+  color: #777777;
+}
+#inProgresDate{
+  position: absolute;
+  right: 20px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;  
+  color: #777777;
 }
 #open_todo{
   position: absolute;
@@ -675,7 +753,7 @@ nav{
   position: absolute;
   width: 129px;
   height: 42px;
-  left: 13%;
+  left: 12%;
   top: 20%;
   font-family: 'Roboto';
   font-style: normal;
@@ -691,16 +769,24 @@ nav{
   width: 203px;
   height: 48px;
   left: 50%;
-  top: 20%; 
+  top: 19%; 
   border-radius: 3px;
   background-color: #28BA63;
   color: #EEEEEE;
+  cursor: pointer;
 }
 #plus_img {
   padding-right: 20px; 
 }
 #todo_count{
   padding-right: 10px;
+}
+.no_todo_div{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 30%;
+  top: 40%;
 }
 #no_todo{
   position: absolute;
@@ -709,12 +795,128 @@ nav{
   align-items: center;
   width: 200px;
   height: 200px;
-  left: 30%;
-  top: 40%;
   background-color: rgba(36, 104, 235, 0.13);
   border-radius: 50%;
 }
-#noTodo_word{
+.showTodo{
+  display: block;
+}
+.list1{
+  position: absolute;
+  float: left;
+  left: 12%;
+  top: 30%;
+  width: 670px;
+  height: 50px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.list101{
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 151.5%;
+  color: #777777;
+}
+.list102{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 97px;
+  height: 26px;
+  right: 150px;
+  top: 20px;
+  background: rgba(70, 115, 228, 0.06);
+  border-radius: 30px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;  
+  color: #4673E4;
+}
+.fa-ellipsis{
+  position: absolute;
+  right: 60px;
+  top: 20px;
+}
+.list2{
+  position: absolute;
+  float: left;
+  left: 12%;
+  top: 41%;
+  width: 670px;
+  height: 50px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.list3{
+  position: absolute;
+  float: left;
+  left: 12%;
+  top: 52%;
+  width: 670px;
+  height: 50px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.list4{
+  position: absolute;
+  float: left;
+  left: 12%;
+  top: 63%;
+  width: 670px;
+  height: 50px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.list5{
+  position: absolute;
+  float: left;
+  left: 12%;
+  top: 74%;
+  width: 670px;
+  height: 50px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-radius: 3px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+.noTodo_word{
   position: absolute;
   width: 200px;
   height: 21px;
@@ -732,13 +934,14 @@ nav{
   width: 116px;
   height: 48px;
   left: 13%;
-  top: 85%;  
+  top: 90%;  
   color: white;
   background: #2468EB;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 #leftArrow{
   height: 14px;
@@ -753,7 +956,7 @@ nav{
   width: 40px;
   height: 40px;
   left: 24%;
-  top: 86%;  
+  top: 91%;  
   border-radius: 50%;
   font-family: 'Roboto';
   font-style: normal;
@@ -761,6 +964,7 @@ nav{
   font-size: 14px;  
   color: #2468EB;
   background: rgba(36, 104, 235, 0.07);
+  cursor: pointer;
 }
 #two{
   position: absolute;
@@ -770,7 +974,7 @@ nav{
   width: 40px;
   height: 40px;
   left: 28%;
-  top: 86%;  
+  top: 91%;  
   border-radius: 50%;
   font-family: 'Roboto';
   font-style: normal;
@@ -778,6 +982,7 @@ nav{
   font-size: 14px;  
   color: white;
   background: #2468EB;
+  cursor: pointer;
 }
 #three{
   position: absolute;
@@ -787,7 +992,7 @@ nav{
   width: 40px;
   height: 40px;
   left: 32%;
-  top: 86%;  
+  top: 91%;  
   border-radius: 50%;
   font-family: 'Roboto';
   font-style: normal;
@@ -795,6 +1000,7 @@ nav{
   font-size: 14px;  
   color: white;
   background: #2468EB; 
+  cursor: pointer;
 }
 #next{
   position: absolute;
@@ -802,13 +1008,14 @@ nav{
   width: 116px;
   height: 48px;
   left: 39%;
-  top: 85%;  
+  top: 90%;  
   color: white;
   background: #2468EB;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 #rightArrow{
   height: 14px;

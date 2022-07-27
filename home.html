@@ -38,14 +38,51 @@
         <div id="user-email"></div>
         <button id="logout" onclick="logout()">Logout</button>
       </div>
-      <div id="open_todo"><img src="images/Open_todo.png"></div>
-      <div id="no_todos">No open todo/note is currently opened until
-        you create a task</div>
+      <div id="open_todo"><img src="images/Open_todo.png" class="hiding"></div>
+      <div id="no_todos" class="hiding">No open todo/note is currently opened until you create a task
+      </div>
+      <div id="inProgressCount_div">
+        <div id="inProgressCount">3<span id="inProgressCountWord">In Progress</span></div>
+        <img src="images/clock.png" id="inProgressCountImg">
+        <div id="inProgresDate">24/07/2019</div>
+    </div>
+    <div id="inProgresheading">Create and endpoint to get the list of users</div>
+    <div id="inProgresDetails">
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Ut enim ad minim veniam</p>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+         magna aliqua. Ut enim ad minim veniam</p>
+    </div>
     </div>
     <div id="todo_count_div"><span id="todo_count">0</span>Todos</div>
-    <div id="create_task_div"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
-    <div id="no_todo"><img src="images/no_todos.png"></div>
-    <div id="noTodo_word">No todos at the moment!</div>
+    <div id="create_task_div" onclick="createTask()"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
+    <div  class="no_todo_div hiding"><div id="no_todo"><img src="images/no_todos.png"></div></div>
+    <div class="noTodo_word hiding">No todos at the moment!</div>
+    <div class="list1">Create an endpoint to get the list of users available in the database
+      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
+      <div class="list102">In Progress</div>
+      <img class="fa-solid fa-ellipsis" src="images/menu.png">
+    </div>
+    <div class="list2">Create an endpoint to get the list of users available in the database
+      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
+      <div class="list102">Backlog</div>
+      <img class="fa-solid fa-ellipsis" src="images/menu.png">
+    </div>
+    <div class="list3">Create an endpoint to get the list of users available in the database
+      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
+      <div class="list102">Overdue</div>
+      <img class="fa-solid fa-ellipsis" src="images/menu.png">
+    </div>
+    <div class="list4">Create an endpoint to get the list of users available in the database
+      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
+      <div class="list102">In Progress</div>
+      <img class="fa-solid fa-ellipsis" src="images/menu.png">
+    </div>
+    <div class="list5">Create an endpoint to get the list of users available in the database
+      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
+      <div class="list102">In Progress</div>
+      <img class="fa-solid fa-ellipsis" src="images/menu.png">
+    </div>
     <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
     <div id="one">1</div>
     <div id="two">2</div>

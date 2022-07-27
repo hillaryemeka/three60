@@ -16,6 +16,7 @@ let confirmPwd = document.getElementById('confirmPwd')
 let confirmPwdMsg = document.getElementById('confirmPwd_msg')
 let userAccount = document.getElementById('userAcount')
 
+
 function signup(event){
   event.preventDefault()
       
@@ -68,6 +69,8 @@ function signup(event){
     password: formData.get('password'),
     confirmPassword: formData.get('confirmPassword')
   }
+  const loading = document.querySelector('.loading')
+  loading.classList.add("show")
   fetch('https://my-diary-dev.herokuapp.com/auth/signup', {
     headers: {
       'Content-Type': 'Application/json'
@@ -111,7 +114,8 @@ function sign_in(){
     email: formdata.get('email'),
     password: formdata.get('password'),
   }
-
+  const loading = document.querySelector('.loading')
+  loading.classList.add("show")
   fetch('https://my-diary-dev.herokuapp.com/auth/login', {
     headers: {
       'Content-Type': 'Application/json'

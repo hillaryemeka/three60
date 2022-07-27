@@ -5,19 +5,16 @@ function displayUserDetails() {
   const token = localStorage.getItem("token")
 
   if (user && token) {
-    console.log(user)
     document.getElementById('userAcount').innerText = user.firstName
   } else {
-    window.location.href = "sign_in.html"
+   // window.location.href = "sign_in.html"
   }
 }
-
-
+displayUserDetails()
 
 function logout() {
   localStorage.removeItem('user')
   localStorage.removeItem('token')
-  // localStorage.clear()
   window.location.href = "sign_in.html"
 }
 
@@ -35,4 +32,21 @@ function displayUser() {
   }
 }
 
-displayUserDetails()
+function createTask() {
+  const emptyTodo = document.querySelector('.no_todo_div').style.display = 'none'
+  const emptyTodoWord = document.querySelector('.noTodo_word').style.display = 'none'
+  const listSection = document.querySelector('.list')
+  fetch("https://jsonplaceholder.typicode.com/todos")
+    .then((response) => response.json())
+    .then((todos) => {
+      listSection.classList.add("showList");
+      const todoList = listSection.querySelector("ul");
+      const myTodos = todos.slice(0, 4);
+
+      for (let t of myTodos) {
+        const li = document.createElement("div");
+        li.textContent = t.title;
+        todoList.appendChild(li);
+      }
+    })
+}
