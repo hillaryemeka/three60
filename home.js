@@ -7,7 +7,7 @@ function displayUserDetails() {
   if (user && token) {
     document.getElementById('userAcount').innerText = user.firstName
   } else {
-   // window.location.href = "sign_in.html"
+   window.location.href = "sign_in.html"
   }
 }
 displayUserDetails()
@@ -35,18 +35,26 @@ function displayUser() {
 function createTask() {
   const emptyTodo = document.querySelector('.no_todo_div').style.display = 'none'
   const emptyTodoWord = document.querySelector('.noTodo_word').style.display = 'none'
-  const listSection = document.querySelector('.list')
+  const parentUl = document.querySelector('.todo-list-container')
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
     .then((todos) => {
-      listSection.classList.add("showList");
-      const todoList = listSection.querySelector("ul");
-      const myTodos = todos.slice(0, 4);
-
+      const myTodos = todos.slice(0, 5);
+      let elementString = ""
       for (let t of myTodos) {
-        const li = document.createElement("div");
-        li.textContent = t.title;
-        todoList.appendChild(li);
+        const todoElement =
+        `<li class="todo-list">
+          <div class="todo-p">
+            <p>${t.title}</p>
+            <p class="list101">Created on 13 July 2019 at 08:33AM</p>
+          </div>
+          <div class="list102">${t.completed ? 'finished' : 'In Progress'}</div>
+          <div class="menu"><img src="images/menu.png"/></div>
+        </li>`
+        elementString += todoElement
+
+        parentUl.innerHTML = elementString
       }
     })
 }
+createTask()

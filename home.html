@@ -9,9 +9,10 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8c73dcca8c.js" crossorigin="anonymous"></script>
   </head>
-  <body id="home">
+  <body>
     <nav>
-      <div class="home_white_logo"> <img src="images/three60.png"></div>
+      <div class="home_white_logo"> 
+        <img src="images/three60.png"></div>
       <div class="three60"><span id="home_three60">three60</span></div>
       <div id="home_todo_block">
         <i class="fa-solid fa-layer-group"></i>
@@ -31,77 +32,82 @@
       </div>
       <div id="user_img"><img src="images/user.png" onclick="displayUser()"></div>
       <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
-    </nav>
-    <div id="open_todos">
       <div id="user-details">
         <div id="hello-user">Hello <span id="user-fname"></span></div>
         <div id="user-email"></div>
         <button id="logout" onclick="logout()">Logout</button>
       </div>
-      <div id="open_todo"><img src="images/Open_todo.png" class="hiding"></div>
-      <div id="no_todos" class="hiding">No open todo/note is currently opened until you create a task
+    </nav>
+    <div class="homeContainer">
+      <div class="main">
+        <div class="head">
+          <div id="todo_count_div"><span id="todo_count">0</span>Todos</div>
+          <div id="create_task_div"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
+        </div>
+        <div class="todosMain">
+          <div id="vertical_card">
+            <div id="all-todo">All Todos</div>
+            <div id="all-todo-count">0</div>
+            <div id="backlog">Backlog</div>
+            <div id="backlog-count">0</div>
+            <div id="in-progress">In Progress</div>
+            <div id="in-progress-count">0</div>
+            <div id="finished">Finished</div>
+            <div id="finished-count">0</div>
+            <div id="overdue">Overdue</div>
+            <div id="overdue-count">0</div>
+            <div id="trash">Trash</div>
+            <div id="trash-count">0</div>
+          </div>
+          <div  class="no_todo_div hiding"><div id="no_todo"><img src="images/no_todos.png"></div></div>
+          <div class="noTodo_word hiding">No todos at the moment!</div>
+          <div>
+            <ul class="todo-list-container">
+              <li class="todo-list">
+                <div class="todo-p">
+                  <p>Create an endpoint to get the list </p>
+                  <p class="list101">Created on 13 July 2019 at 08:33AM</p>
+                </div>
+                <div class="list102">In Progress</div>
+                <div class="menu"><img src="images/menu.png"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="todosNav">
+          <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
+          <div id="one">1</div>
+          <div id="two">2</div>
+          <div id="three">3</div>
+          <div id="next">Next<img id="rightArrow" src="images/rightArrow.png"></div>
+        </div>
       </div>
-      <div id="inProgressCount_div">
-        <div id="inProgressCount">3<span id="inProgressCountWord">In Progress</span></div>
-        <img src="images/clock.png" id="inProgressCountImg">
-        <div id="inProgresDate">24/07/2019</div>
-    </div>
-    <div id="inProgresheading">Create and endpoint to get the list of users</div>
-    <div id="inProgresDetails">
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam</p>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam</p>
-    </div>
-    </div>
-    <div id="todo_count_div"><span id="todo_count">0</span>Todos</div>
-    <div id="create_task_div" onclick="createTask()"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
-    <div  class="no_todo_div hiding"><div id="no_todo"><img src="images/no_todos.png"></div></div>
-    <div class="noTodo_word hiding">No todos at the moment!</div>
-    <div class="list1">Create an endpoint to get the list of users available in the database
-      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
-      <div class="list102">In Progress</div>
-      <img class="fa-solid fa-ellipsis" src="images/menu.png">
-    </div>
-    <div class="list2">Create an endpoint to get the list of users available in the database
-      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
-      <div class="list102">Backlog</div>
-      <img class="fa-solid fa-ellipsis" src="images/menu.png">
-    </div>
-    <div class="list3">Create an endpoint to get the list of users available in the database
-      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
-      <div class="list102">Overdue</div>
-      <img class="fa-solid fa-ellipsis" src="images/menu.png">
-    </div>
-    <div class="list4">Create an endpoint to get the list of users available in the database
-      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
-      <div class="list102">In Progress</div>
-      <img class="fa-solid fa-ellipsis" src="images/menu.png">
-    </div>
-    <div class="list5">Create an endpoint to get the list of users available in the database
-      <div class="list101">Created on 13 July 2019 at 08:33AM</div>
-      <div class="list102">In Progress</div>
-      <img class="fa-solid fa-ellipsis" src="images/menu.png">
-    </div>
-    <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
-    <div id="one">1</div>
-    <div id="two">2</div>
-    <div id="three">3</div>
-    <div id="next">Next<img id="rightArrow" src="images/rightArrow.png"></div>
-    <div id="vertical_card">
-      <div id="all-todo">All Todos</div>
-      <div id="all-todo-count">0</div>
-      <div id="backlog">Backlog</div>
-      <div id="backlog-count">0</div>
-      <div id="in-progress">In Progress</div>
-      <div id="in-progress-count">0</div>
-      <div id="finished">Finished</div>
-      <div id="finished-count">0</div>
-      <div id="overdue">Overdue</div>
-      <div id="overdue-count">0</div>
-      <div id="trash">Trash</div>
-      <div id="trash-count">0</div>
-    </div>
+      <div class="details">
+        <!--<div id="open_todos">
+          <div id="open_todo"><img src="images/Open_todo.png" class="hiding"></div>
+          <div id="no_todos" class="hiding">No open todo/note is currently opened until you create a task
+          </div>-->
+          <div id="inProgressCount_div">
+            <div id="inProgressCount">3</div>
+            <div id="inProgressCountWord">In Progress</div>
+            <img src="images/clock.png" id="inProgressCountImg">
+            <div id="inProgresDate">24/07/2019</div>
+        </div>
+        <div id="inProgresheading">Create and endpoint to get the list of users</div>
+        <div id="inProgresDetails">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+             magna aliqua. Ut enim ad minim veniam</p>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+             magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+        <div class="editNdelete">
+          <img src="images/edit-3.png">
+          <img src="images/trash-2.png">
+        </div>
+        </div>
+      </div>
+     </div>
+    
     <script src="home.js"></script>
   </body>
 </html>

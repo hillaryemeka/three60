@@ -491,9 +491,6 @@ body{
                   /*  HOME   */ 
                  /*  HOME   */ 
 
-#home{
-  background-color: #E5E5E5;
-}
 .home_white_logo{
   display: flex;
   justify-content: center;
@@ -514,8 +511,34 @@ nav{
   padding-left: 50px;
   background-color: white;
 }
+.homeContainer{
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns: auto 370px;
+}
+.main{
+  background-color: #E5E5E5;
+}
+.details{
+  background-color: white;
+  padding-left: 30px;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px 10px 120px;
+}
+.todosMain{
+  display: flex;
+  padding: 0px 40px 0px 40px;
+  justify-content: space-between;
+}
+.todosNav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 340px 0px 170px;
+}
 #home_three60{
-  display: block;
   font-family: 'Rubik';
   font-weight: 500;
   font-size: 24px;
@@ -633,6 +656,7 @@ nav{
   top: 78px;
   right: 68px;
   border-radius: 5px;
+  background-color: #E5E5E5;
 }
 #logout{
   position: absolute;
@@ -661,19 +685,18 @@ nav{
   font-size: 20px;
 }
 #open_todos{
-  position: absolute;
   width: 28%;
   height: 100%;
   right: 0px;
   background-color: white;
 }
 #inProgressCount_div{
-  position: absolute;
-  top: 120px;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 10px 0px;
 }
 #inProgressCount{
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,12 +704,9 @@ nav{
   height: 29px;
   border-radius: 50%;
   background: #4673E4;
-  left: 20px;
   color: white;
 }
 #inProgressCountWord{
-  position: absolute;
-  left: 50px;
   width: 95px;
   font-family: 'Rubik';
   font-style: normal;
@@ -694,12 +714,14 @@ nav{
   font-size: 18px;  
   color: #4673E4;
 }
-#inProgressCountImg{
-  position: absolute;
-  right: 100px;
+#inProgresDate{
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;  
+  color: #777777;
 }
 #inProgresheading{
-  position: absolute;
   left: 20px;
   top: 160px;
   width: 309px;
@@ -710,7 +732,6 @@ nav{
   color: #555555;  
 }
 #inProgresDetails{
-  position: absolute;
   left: 20px;
   width: 304px;
   top: 290px;
@@ -720,24 +741,20 @@ nav{
   font-size: 13px;  
   color: #777777;
 }
-#inProgresDate{
-  position: absolute;
-  right: 20px;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;  
-  color: #777777;
+.editNdelete{
+  display: flex;
+  justify-content:space-between;
+  width: 70px;
+  padding: 20px 40px;  
+  float: right;
 }
 #open_todo{
-  position: absolute;
   height: 68.75px;
   width: 87.5px;
   left: 122.5px;
   top: 296.5px;
 }
 #no_todos{
-  position: absolute;
   height: 32px;
   width: 270px;
   left: 55px;
@@ -750,7 +767,6 @@ nav{
   color: #979BA9;
 }
 #todo_count_div{
-  position: absolute;
   width: 129px;
   height: 42px;
   left: 12%;
@@ -762,7 +778,6 @@ nav{
   color: #000000;
 }
 #create_task_div{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -782,14 +797,12 @@ nav{
   padding-right: 10px;
 }
 .no_todo_div{
-  position: absolute;
   width: 200px;
   height: 200px;
   left: 30%;
   top: 40%;
 }
 #no_todo{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -801,12 +814,14 @@ nav{
 .showTodo{
   display: block;
 }
-.list1{
-  position: absolute;
-  float: left;
-  left: 12%;
-  top: 30%;
-  width: 670px;
+.todo-list-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.todo-list{
+  display: flex;
+  width: 710px;
   height: 50px;
   background-color: white;
   padding-top: 10px;
@@ -818,16 +833,19 @@ nav{
   font-size: 14px;
   color: #000000;
 }
+.todo-p p{
+  height: 20px;
+  margin: 0px;
+  padding: 0px;
+}
 .list101{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  line-height: 151.5%;
   color: #777777;
 }
 .list102{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -837,87 +855,20 @@ nav{
   top: 20px;
   background: rgba(70, 115, 228, 0.06);
   border-radius: 30px;
+  margin: 5px 40px 0px 60px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 13px;  
   color: #4673E4;
 }
-.fa-ellipsis{
-  position: absolute;
-  right: 60px;
-  top: 20px;
-}
-.list2{
-  position: absolute;
-  float: left;
-  left: 12%;
-  top: 41%;
-  width: 670px;
-  height: 50px;
-  background-color: white;
-  padding-top: 10px;
-  padding-left: 20px;
-  border-radius: 3px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-}
-.list3{
-  position: absolute;
-  float: left;
-  left: 12%;
-  top: 52%;
-  width: 670px;
-  height: 50px;
-  background-color: white;
-  padding-top: 10px;
-  padding-left: 20px;
-  border-radius: 3px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-}
-.list4{
-  position: absolute;
-  float: left;
-  left: 12%;
-  top: 63%;
-  width: 670px;
-  height: 50px;
-  background-color: white;
-  padding-top: 10px;
-  padding-left: 20px;
-  border-radius: 3px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-}
-.list5{
-  position: absolute;
-  float: left;
-  left: 12%;
-  top: 74%;
-  width: 670px;
-  height: 50px;
-  background-color: white;
-  padding-top: 10px;
-  padding-left: 20px;
-  border-radius: 3px;
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 10px 30px;
 }
 .noTodo_word{
-  position: absolute;
   width: 200px;
   height: 21px;
   left: 30%;
@@ -929,7 +880,6 @@ nav{
   color: rgba(0, 0, 0, 0.13);
 }
 #previous{
-  position: absolute;
   display: flex;
   width: 116px;
   height: 48px;
@@ -949,7 +899,6 @@ nav{
   padding-right: 10px;
 }
 #one{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -967,7 +916,6 @@ nav{
   cursor: pointer;
 }
 #two{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -985,7 +933,6 @@ nav{
   cursor: pointer;
 }
 #three{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1003,7 +950,6 @@ nav{
   cursor: pointer;
 }
 #next{
-  position: absolute;
   display: flex;
   width: 116px;
   height: 48px;
@@ -1023,11 +969,13 @@ nav{
   padding-left: 10px;
 }
 #vertical_card{
-  position: absolute;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 10px;
   width: 66px;
-  height: 405px;
+  height: 390px;
   left: 4%;
   top: 30%;
   background-color: white;
@@ -1035,7 +983,6 @@ nav{
   border-radius: 999px;
 }
 #all-todo, #backlog, #in-progress, #finished, #overdue, #trash{
- position: absolute;
   width: 43px;
   height: 19px;
   font-family: 'Rubik';
@@ -1045,7 +992,6 @@ nav{
   color: #444444;
 }
 #all-todo-count, #backlog-count, #in-progress-count, #finished-count, #overdue-count, #trash-count{
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1057,16 +1003,10 @@ nav{
   font-weight: 400;
   font-size: 13px;
 }
-#all-todo{
-  top: 15px;
-}
 #all-todo-count{
   top: 34px;
   color: #4673E4;
   background: rgba(70, 115, 228, 0.06);
-}
-#backlog{
-  top: 79px;
 }
 #backlog-count{
   top: 98px;
@@ -1075,34 +1015,22 @@ nav{
 }
 #in-progress{
   width: 53px;
-  top: 143px;
 }
 #in-progress-count{
   top: 162px;
   color: #4673E4;
   background: rgba(70, 115, 228, 0.18);
 }
-#finished{
-  top: 207px;
-}
-
 #finished-count{
   top: 226px;
   color: #28BA63;
   background: rgba(8, 201, 85, 0.05);
-}
-#overdue{
-  top: 271px;
 }
 #overdue-count{
   top: 290px;
   color: #C9981A;
   background: rgba(201, 152, 26, 0.05);
 } 
-#trash{
-  top: 335px;
-  left: 20px;
-}
 #trash-count{
   top: 354px;
   color: #F20101;
