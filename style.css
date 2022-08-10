@@ -515,6 +515,7 @@ nav{
   padding-top: 72px;
   display: grid;
   grid-template-columns: auto 370px;
+  height: calc(100vh - 72px);
 }
 .main{
   background-color: #E5E5E5;
@@ -526,17 +527,22 @@ nav{
 .head{
   display: flex;
   justify-content: space-between;
-  padding: 30px 40px 10px 120px;
+  width: 730px;
+  margin-left: 15%;
+  padding-top: 30px;
 }
 .todosMain{
   display: flex;
-  padding: 0px 40px 0px 40px;
   justify-content: space-between;
+  width: 650px;
+  margin-left: 5%;
 }
 .todosNav{
   display: flex;
   justify-content: space-between;
-  padding: 0px 340px 0px 170px;
+  width: 420px;
+  align-items: center;
+  margin-left: 15%;
 }
 #home_three60{
   font-family: 'Rubik';
@@ -821,11 +827,11 @@ nav{
 }
 .todo-list{
   display: flex;
-  width: 710px;
+  width: 730px;
   height: 50px;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
-  padding-top: 10px;
-  padding-left: 20px;
   border-radius: 3px;
   font-family: 'Open Sans';
   font-style: normal;
@@ -834,9 +840,9 @@ nav{
   color: #000000;
 }
 .todo-p p{
-  height: 20px;
   margin: 0px;
-  padding: 0px;
+  padding-left: 20px;
+  width: 500px;
 }
 .list101{
   font-family: 'Rubik';
@@ -851,11 +857,8 @@ nav{
   align-items: center;
   width: 97px;
   height: 26px;
-  right: 150px;
-  top: 20px;
   background: rgba(70, 115, 228, 0.06);
   border-radius: 30px;
-  margin: 5px 40px 0px 60px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -863,10 +866,33 @@ nav{
   color: #4673E4;
 }
 .menu{
+  padding-right: 20px;
+}
+.todoMenu{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 0px 10px 30px;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  height: 150px;
+  width: 180px;
+  top: 32%;
+  left: 53%;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.09);
+}
+.markAsCompleted,.edit,.delete{
+  display: flex;
+  gap: 20px;
+  margin-left: 15px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.7);
+}
+.markAsCompleted{
+  padding-top: 15px;
 }
 .noTodo_word{
   width: 200px;
@@ -976,8 +1002,6 @@ nav{
   padding-top: 10px;
   width: 66px;
   height: 390px;
-  left: 4%;
-  top: 30%;
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 999px;

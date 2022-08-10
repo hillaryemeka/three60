@@ -49,7 +49,7 @@ function createTask() {
             <p class="list101">Created on 13 July 2019 at 08:33AM</p>
           </div>
           <div class="list102">${t.completed ? 'finished' : 'In Progress'}</div>
-          <div class="menu"><img src="images/menu.png"/></div>
+          <div class="menu" onclick="todoMenu()"><img src="images/menu.png"/></div>
         </li>`
         elementString += todoElement
 
@@ -58,3 +58,7 @@ function createTask() {
     })
 }
 createTask()
+
+function todoMenu(){
+  
+}
