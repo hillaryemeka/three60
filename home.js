@@ -60,5 +60,10 @@ function createTask() {
 createTask()
 
 function todoMenu(){
-  
+  let display = document.querySelector('.todoMenu').style.display
+  if (display == 'none'){
+    document.querySelector('.todoMenu').style.display = 'flex'
+  } else {
+    document.querySelector('.todoMenu').style.display = 'none'
+  }
 }
