@@ -867,8 +867,9 @@ nav{
 }
 .menu{
   padding-right: 20px;
+  position: relative;
 }
-.todoMenu{
+.todoAction{
   display: none;
   flex-direction: column;
   gap: 30px;
