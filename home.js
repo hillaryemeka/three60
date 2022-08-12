@@ -41,7 +41,9 @@ function createTask() {
     .then((todos) => {
       const myTodos = todos.slice(0, 5);
       let elementString = ""
+      let count = 0
       for (let t of myTodos) {
+        count ++
         const todoElement =
         `<li class="todo-list">
           <div class="todo-p">
@@ -49,7 +51,23 @@ function createTask() {
             <p class="list101">Created on 13 July 2019 at 08:33AM</p>
           </div>
           <div class="list102">${t.completed ? 'finished' : 'In Progress'}</div>
-          <div class="menu" onclick="todoMenu()"><img src="images/menu.png"/></div>
+          <div class="menu" onclick="todoMenu(${count})">
+            <img src="images/menu.png"/>
+            <div class="todoAction todoMenu-${count}">
+            <div class="markAsCompleted">
+              <img src="images/Rectangle.png" alt="">
+              <div>Mark as complete</div>
+            </div>
+            <div class="edit">
+              <img src="images/pen.png" alt="">
+              <div>Edit</div>
+            </div>
+            <div class="delete">
+              <img src="images/delete.png" alt="">
+              <div>delete</div>
+            </div>
+          </div>
+          </div>
         </li>`
         elementString += todoElement
 
@@ -59,11 +77,11 @@ function createTask() {
 }
 createTask()
 
-function todoMenu(){
-  let display = document.querySelector('.todoMenu').style.display
+function todoMenu(count){
+  let display = document.querySelector(`.todoMenu-${count}`).style.display
   if (display == 'none'){
-    document.querySelector('.todoMenu').style.display = 'flex'
+    document.querySelector(`.todoMenu-${count}`).style.display = 'flex'
   } else {
-    document.querySelector('.todoMenu').style.display = 'none'
+    document.querySelector(`.todoMenu-${count}`).style.display = 'none'
   }
 }
