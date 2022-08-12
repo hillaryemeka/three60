@@ -39,7 +39,7 @@ function createTask() {
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
     .then((todos) => {
-      const myTodos = todos.slice(0, 5);
+      const myTodos = todos.slice(0, 6);
       let elementString = ""
       let count = 0
       for (let t of myTodos) {
