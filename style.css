@@ -142,8 +142,8 @@ body{
   position: absolute;
   width: 100px;
   height: 100px;
-  left: -35px;
-  top: 85vh;
+  left: -30px;
+  top: 90vh;
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)), 
@@ -514,11 +514,13 @@ nav{
 .homeContainer{
   padding-top: 72px;
   display: grid;
-  grid-template-columns: auto 370px;
+  grid-template-columns: 3fr 1fr;
   height: calc(100vh - 72px);
 }
 .main{
   background-color: #E5E5E5;
+  display: grid;
+  justify-content: center;
 }
 .details{
   background-color: white;
@@ -528,21 +530,20 @@ nav{
   display: flex;
   justify-content: space-between;
   width: 730px;
-  margin-left: 15%;
+  margin-left: 13%;
   padding-top: 30px;
 }
 .todosMain{
   display: flex;
   justify-content: space-between;
   width: 650px;
-  margin-left: 5%;
 }
 .todosNav{
   display: flex;
   justify-content: space-between;
   width: 420px;
   align-items: center;
-  margin-left: 15%;
+  margin-left: 13%;
 }
 #home_three60{
   font-family: 'Rubik';
@@ -602,7 +603,7 @@ nav{
   position: absolute;
   width: 400px;
   height: 45px;
-  left: 770px;
+  right: 170px;
   top: 12px;
   background: #F6F7FB;
   border-radius: 999px;
@@ -625,7 +626,7 @@ nav{
 #user_img{
   position: absolute;
   overflow: hidden;
-  left: 1210px;
+  right: 80px;
   top: 19px;
   width: 30px;
   height: 30px;
