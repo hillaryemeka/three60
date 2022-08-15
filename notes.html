@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Quattrocento+Sans:wght@700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8c73dcca8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="home_white_logo"> 
+      <img src="images/three60.png"></div>
+    <div class="three60"><span id="home_three60">three60</span></div>
+    <div id="home_todo_block">
+      <i class="fa-solid fa-layer-group"></i>
+      <a id="todo">Todos</a>
+    </div>
+    <div id="home_notes_block">
+      <i class="fa-regular fa-file"></i>
+      <a id="note">Notes</a>
+    </div>
+    <div id="home_links_block">
+      <i class="fa-solid fa-link"></i>
+      <a id="links">Links</a>
+    </div>
+    <div id="search">
+      <img src="images/search.png" id="search_img">
+      <input type="text" placeholder="Search terms"  id="search_input">
+    </div>
+    <div id="user_img"><img src="images/user.png" onclick="displayUser()"></div>
+    <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
+    <div id="user-details">
+      <div id="hello-user">Hello <span id="user-fname"></span></div>
+      <div id="user-email"></div>
+      <button id="logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+  <script src="home.js"></script>
+</body>
+</html>
