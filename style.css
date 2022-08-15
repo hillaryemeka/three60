@@ -514,11 +514,13 @@ nav{
 .homeContainer{
   padding-top: 72px;
   display: grid;
-  grid-template-columns: auto 370px;
+  grid-template-columns: 3fr 1fr;
   height: calc(100vh - 72px);
 }
 .main{
   background-color: #E5E5E5;
+  display: grid;
+  justify-content: center;
 }
 .details{
   background-color: white;
@@ -528,21 +530,20 @@ nav{
   display: flex;
   justify-content: space-between;
   width: 730px;
-  margin-left: 15%;
+  margin-left: 13%;
   padding-top: 30px;
 }
 .todosMain{
   display: flex;
   justify-content: space-between;
   width: 650px;
-  margin-left: 5%;
 }
 .todosNav{
   display: flex;
   justify-content: space-between;
   width: 420px;
   align-items: center;
-  margin-left: 15%;
+  margin-left: 13%;
 }
 #home_three60{
   font-family: 'Rubik';
