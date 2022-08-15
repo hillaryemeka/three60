@@ -4,30 +4,25 @@ html, body, html * {
 }
 body{
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 .container{
   position: absolute;
   width: 100vw;
   height: 100vh;
   background: white;
-  overflow: hidden;
-}
+  overflow: hidden;}
 .column {
   float: left;
   width: 50vw;
-  height: 100vh;
-}
+  height: 100vh;}
 .blue{
-  background-color: rgba(26, 77, 230, 0.81);
-}
+  background-color: rgba(26, 77, 230, 0.81);}
 .blue_container{
   position: absolute;
   left: 6.5vw;
   width: 486px;
   height: 418px;
-  top: 20.4vh;
-}
+  top: 20.4vh;}
 .word_container{
   position: absolute;
   width: 339px;
@@ -38,8 +33,7 @@ body{
   line-height: 65px;
   font-style: normal;
   text-align: left;
-  color: #FFFFFF;
-}
+  color: #FFFFFF;}
 .bookmarks{
   position: absolute;
   width: 144px;
@@ -47,14 +41,12 @@ body{
   left: 324px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .bookmark_image_container, .notes_image_container, .todos_image_container{
   display: flex;
   align-items: center;
   height: 105px;
-  padding-left: 5%;
-}
+  padding-left: 5%;}
 .bookmark_image_circle, .notes_image_circle, .todos_image_circle{
   display: flex;
   justify-content: center;
@@ -62,14 +54,12 @@ body{
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: rgba(70, 115, 228, 0.1);
-}
+  background: rgba(70, 115, 228, 0.1);}
 .bookmark_container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 105px;
-}
+  height: 105px;}
 .bookmark_word, .notes_word, .todo_word{
   padding-left: 5%;
   font-family: 'Quattrocento Sans';
@@ -78,8 +68,7 @@ body{
   font-size: 14px;
   line-height: 16px;
   /* identical to box height */
-  color: #5F5F60;
-}
+  color: #5F5F60;}
 .bookmark_circle{
   position: absolute;
   width: 100px;
@@ -87,8 +76,7 @@ body{
   left: 347px;
   top: 98px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.37)
-}
+  background: rgba(255, 255, 255, 0.37)}
 .notes{
   position: absolute;
   width: 144px;
@@ -96,8 +84,7 @@ body{
   left: 162px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .notes_triangle{
   position: absolute;
 	width: 0;
@@ -106,8 +93,7 @@ body{
 	border-right: 50px solid transparent;
 	border-bottom: 50px solid rgba(255, 255, 255, 0.39);
   left: 182px;
-  top: 225px;
-}
+  top: 225px;}
 .todos{
   position: absolute;
   width: 144px;
@@ -115,8 +101,7 @@ body{
   left: 0px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .todos_angle{
   position: absolute;
   width: 0;
@@ -125,8 +110,7 @@ body{
 	border-right: 2vw solid transparent;
 	border-top: 7vh solid rgba(36, 104, 235, 0.81);
   left: 84px;
-  top: 155px;
- }
+  top: 155px;}
 .upper_circle{
   position:absolute;
   width: 100px;
@@ -136,8 +120,7 @@ body{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
-              rgba(133, 156, 217, 0.47)
-}
+              rgba(133, 156, 217, 0.47)}
 .lower_circle{
   position: absolute;
   width: 100px;
@@ -147,8 +130,7 @@ body{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)), 
-            rgba(133, 156, 217, 0.47);
-}
+            rgba(133, 156, 217, 0.47);}
 .article{
   position: absolute;
   width: 456px;
@@ -160,21 +142,17 @@ body{
   font-weight: 400;
   font-size: 14px;
   /* or 22px */
-  color: #FFFFFF;
-}
+  color: #FFFFFF;}
 .white{
-  background-color: white;
-}
+  background-color: white;}
 .white_container{
   position: absolute;
   width: 384px;
   height: 560px;
   left: 60.3%;
-  top: 5%;
-}
+  top: 5%;}
 .hiding{
-  display: none;
-}
+  display: none;}
 .show{
   position: absolute;
   display: block;
@@ -183,8 +161,7 @@ body{
   font-family: 'Rubik';
   font-weight: 400;
   font-size: 16px;
-  color: #2468EB;
-}
+  color: #2468EB;}
 .white_logo{
   display: flex;
   justify-content: center;
@@ -193,20 +170,17 @@ body{
   height: 50px;
   padding: 2px 2px 1px 3px;
   border-radius: 50%;
-  background: #2468EB;
-}
+  background: #2468EB;}
 .three60{
   position: absolute;
   left: 60px;
-  top: 11px;
- }
+  top: 11px;}
 #three60{
   display: block;
   font-family: 'Rubik';
   font-weight: 500;
   font-size: 24px;
-  color: #2468EB;
-}
+  color: #2468EB;}
 .create_act{
   position: absolute;
   top: 68px;
@@ -214,8 +188,7 @@ body{
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: #000000;
-}
+  color: #000000;}
 ::placeholder{
   font-family: 'Roboto';
   font-style: normal;
@@ -223,8 +196,7 @@ body{
   font-size: 14px;
   line-height: 16px;
   color: #C2C4CB;
-  padding-left: 10px;
-}
+  padding-left: 10px;}
 #first_name_label{
   position: absolute;
   top: 110px;
@@ -233,8 +205,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #first_name{
   box-sizing: border-box;
   position: absolute;
@@ -243,13 +214,11 @@ body{
   top: 130px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #first_name_msg{
   position: absolute;
   top: 169px;
-  color: red;
-}
+  color: red;}
 #last_name_label{
   position: absolute;
   top: 183px;
@@ -258,8 +227,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #last_name{
   box-sizing: border-box;
   position: absolute;
@@ -268,13 +236,11 @@ body{
   top: 205px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #last_name_msg{
   position: absolute;
   top: 246px;
-  color: red;
-}
+  color: red;}
 #email_label{
   position: absolute;
   top: 259px;
@@ -283,8 +249,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #email{
   box-sizing: border-box;
   position: absolute;
@@ -293,13 +258,11 @@ body{
   top: 279px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #email_msg{
   position: absolute;
   top: 317px;
-  color: red;
-}
+  color: red;}
 #pwd_label{
   position: absolute;
   top: 331px;
@@ -308,8 +271,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089;}
  #pwd{
   box-sizing: border-box;
   position: absolute;
@@ -318,13 +280,11 @@ body{
   top: 348px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
- }
+  border-radius: 3px;}
  #pwd_msg{
   position: absolute;
   top: 386px;
-  color: red;
- }
+  color: red;}
  #confirmPwd_label{
   position: absolute;
   top: 396px;
@@ -333,8 +293,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089;}
  #confirmPwd{
   box-sizing: border-box;
   position: absolute;
@@ -343,13 +302,11 @@ body{
   top: 416px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #confirmPwd_msg{
   position: absolute;
   top: 452px;
-  color: red;
- }
+  color: red;}
  #signUp_btn{
   position: absolute;
   width: 384px;
@@ -358,8 +315,7 @@ body{
   background: #2468EB;
   border-radius: 3px;
   color: white;
-  border: none;
- }
+  border: none;}
  .google_btn{
   box-sizing: border-box;
   position: absolute;
@@ -369,8 +325,7 @@ body{
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
-  border: transparent;
- }
+  border: transparent;}
  #ggl_link{
   position: absolute;
   left: 38%;
@@ -378,23 +333,18 @@ body{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
- }
+  font-size: 14px;}
  #singUpLink, #signInLink{
   color: #2468EB;
-  text-decoration: none;
- }
+  text-decoration: none;}
  #google_img{
   position: absolute;
   left: 31%;
-  top: 35%;
-
- }
+  top: 35%; }
  #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
  #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover,#confirmPwd:hover {
    border: 3px solid rgb(0, 153, 255);
-   transform: scale(1.01);
- }
+   transform: scale(1.01);}
  .sign_in{
   position: absolute;
   top: 550px;
@@ -402,8 +352,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
- }
+  color: #000000;}
  .terms{
   position: absolute;
   left: 60.5%;
@@ -412,8 +361,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 1.1vw;
-  color: #979BA9;
- }
+  color: #979BA9;}
  #signIn_email_label{
   position: absolute;
   top: 118px;
@@ -422,8 +370,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #signIn_email{
   box-sizing: border-box;
   position: absolute;
@@ -432,13 +379,11 @@ body{
   top: 137px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #signIn_email_msg{
   position: absolute;
   top: 185px;
-  color: red;
-}
+  color: red;}
 #signIn_pwd_label{
   position: absolute;
   top: 207px;
@@ -447,8 +392,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089;}
  #signIn_pwd{
   box-sizing: border-box;
   position: absolute;
@@ -457,13 +401,11 @@ body{
   top: 227px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
- }
+  border-radius: 3px;}
  #signIn_pwd_msg{
   position: absolute;
   top: 277px;
-  color: red;
- }
+  color: red;}
  #signIn_btn{
   position: absolute;
   width: 384px;
@@ -476,8 +418,7 @@ body{
   font-weight: 500;
   font-size: 1.1vw;
   color: #FFFFFF;
-  border: none;
- }
+  border: none;}
  .sign_up{
   position: absolute;
   top: 355px;
@@ -485,8 +426,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
- }
+  color: #000000;}
 
                   /*  HOME   */ 
                  /*  HOME   */ 
@@ -500,8 +440,7 @@ body{
   padding: 2px 2px 1px 3px;
   border-radius: 50%;
   background: #2468EB;
-  margin-bottom: 9px;
-}
+  margin-bottom: 9px;}
 nav{
   position: fixed;
   width: 100%;
@@ -509,11 +448,15 @@ nav{
   margin: 0;
   padding-top: 10px;
   padding-left: 50px;
-  background-color: white;
-}
+  background-color: white;}
 .homeContainer{
   padding-top: 72px;
   display: grid;
+ft-create-link-page
+  grid-template-columns: 3fr 1frpx;
+  height: calc(100vh - 72px);}
+.main{
+  background-color: #E5E5E5;}
   grid-template-columns: 3fr 1fr;
   height: calc(100vh - 72px);
 }
@@ -522,29 +465,40 @@ nav{
   display: grid;
   justify-content: center;
 }
+master
 .details{
   background-color: white;
-  padding-left: 30px;
-}
+  padding-left: 30px;}
 .head{
   display: flex;
   justify-content: space-between;
   width: 730px;
-  margin-left: 13%;
+ft-create-link-page
+  margin-left: 15%;
+  padding-top: 30px;}
+  margin-left: 15%;
   padding-top: 30px;
 }
+master
 .todosMain{
   display: flex;
   justify-content: space-between;
   width: 650px;
-}
+ft-create-link-page
+  margin-left: 5%;}
+margin-left: 5%;}
+ master
 .todosNav{
   display: flex;
   justify-content: space-between;
   width: 420px;
   align-items: center;
-  margin-left: 13%;
+ft-create-link-page
+  margin-left: 15%;}
+  
+  margin-left: 15%;
 }
+master
 #home_three60{
   font-family: 'Rubik';
   font-weight: 500;
@@ -552,8 +506,7 @@ nav{
   color: #2468EB;
   top: 11px;
   left: 60px;
-  position: absolute;
-}
+  position: absolute;}
 #home_todo_block{
   position: absolute;
   left: 255px;
@@ -564,17 +517,14 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #todo, #links, #note{
   position: absolute;
   left: 20px;
-  top: -2px;
-}
+  top: -2px;}
 #home_todo_block:hover,#home_notes_block:hover,#home_links_block:hover{
   border-bottom: 2px solid #4673E4;
-  color: blue;
-} 
+  color: blue;} 
 #home_notes_block{
   position: absolute;
   width: 60px;
@@ -585,8 +535,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #home_links_block{
   position: absolute;
   width: 60px;
@@ -597,8 +546,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #search{
   position: absolute;
   width: 400px;
@@ -606,23 +554,20 @@ nav{
   right: 170px;
   top: 12px;
   background: #F6F7FB;
-  border-radius: 999px;
-}
+  border-radius: 999px;}
 #search_input{
   width: 100%;
   height: 100%;
   background: #F6F7FB;
   border-radius: 999px;
   border: none;
-  padding-left: 25px;
-}
+  padding-left: 25px;}
 #search_img{
   height: 17px;
   width: 17px;
   position: absolute;
   left: 10px;
-  top: 14px;
-}
+  top: 14px;}
 #user_img{
   position: absolute;
   overflow: hidden;
@@ -631,14 +576,12 @@ nav{
   width: 30px;
   height: 30px;
   background-color: #E5E5E5;
-  border-radius: 50%;
-}
+  border-radius: 50%;}
 #user_img img{
   display: block;
   margin: auto;
   max-width: 100%;
-  max-width: 100%;
-}
+  max-width: 100%;}
 #userAcount_div{
   position: absolute;
   display: none;
@@ -647,11 +590,9 @@ nav{
   font-family: 'Rubik';
   color: #2468EB;
   font-weight: 400;
-  font-size: 20px;
-}
-#user_img:hover + #userAcount_div{
-  display: block;
-}
+  font-size: 20px;}
+#user_img:hover + #userAcount_div, #linksUserImg:hover + #userAcount_div{
+  display: block;}
 #user-details{
   position: absolute;
   display: none;
@@ -663,8 +604,7 @@ nav{
   top: 78px;
   right: 68px;
   border-radius: 5px;
-  background-color: #E5E5E5;
-}
+  background-color: #E5E5E5;}
 #logout{
   position: absolute;
   bottom: 15px;
@@ -676,33 +616,27 @@ nav{
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 3px;
-  padding-bottom: 7px;
-}
+  padding-bottom: 7px;}
 #hello-user{
   position: absolute;
-  top: 20px;
-}
+  top: 20px;}
 #user-email{
-  font-size: 14px;
-}
+  font-size: 14px;}
 #userAcount{
   font-family: 'Rubik';
   color: #2468EB;
   font-weight: 400;
-  font-size: 20px;
-}
+  font-size: 20px;}
 #open_todos{
   width: 28%;
   height: 100%;
   right: 0px;
-  background-color: white;
-}
+  background-color: white;}
 #inProgressCount_div{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 10px 0px;
-}
+  padding: 20px 30px 10px 0px;}
 #inProgressCount{
   display: flex;
   align-items: center;
@@ -711,23 +645,20 @@ nav{
   height: 29px;
   border-radius: 50%;
   background: #4673E4;
-  color: white;
-}
+  color: white;}
 #inProgressCountWord{
   width: 95px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;  
-  color: #4673E4;
-}
+  color: #4673E4;}
 #inProgresDate{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;  
-  color: #777777;
-}
+  color: #777777;}
 #inProgresheading{
   left: 20px;
   top: 160px;
@@ -736,8 +667,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 36px;  
-  color: #555555;  
-}
+  color: #555555;}
 #inProgresDetails{
   left: 20px;
   width: 304px;
@@ -746,21 +676,18 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 13px;  
-  color: #777777;
-}
+  color: #777777;}
 .editNdelete{
   display: flex;
   justify-content:space-between;
   width: 70px;
   padding: 20px 40px;  
-  float: right;
-}
+  float: right;}
 #open_todo{
   height: 68.75px;
   width: 87.5px;
   left: 122.5px;
-  top: 296.5px;
-}
+  top: 296.5px;}
 #no_todos{
   height: 32px;
   width: 270px;
@@ -771,8 +698,7 @@ nav{
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #979BA9;
-}
+  color: #979BA9;}
 #todo_count_div{
   width: 129px;
   height: 42px;
@@ -782,8 +708,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  color: #000000;
-}
+  color: #000000;}
 #create_task_div{
   display: flex;
   justify-content: center;
@@ -795,20 +720,16 @@ nav{
   border-radius: 3px;
   background-color: #28BA63;
   color: #EEEEEE;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #plus_img {
-  padding-right: 20px; 
-}
+  padding-right: 20px;}
 #todo_count{
-  padding-right: 10px;
-}
+  padding-right: 10px;}
 .no_todo_div{
   width: 200px;
   height: 200px;
   left: 30%;
-  top: 40%;
-}
+  top: 40%;}
 #no_todo{
   display: flex;
   justify-content: center;
@@ -816,16 +737,13 @@ nav{
   width: 200px;
   height: 200px;
   background-color: rgba(36, 104, 235, 0.13);
-  border-radius: 50%;
-}
+  border-radius: 50%;}
 .showTodo{
-  display: block;
-}
+  display: block;}
 .todo-list-container{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
+  gap: 10px;}
 .todo-list{
   display: flex;
   width: 730px;
@@ -838,20 +756,17 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
-}
+  color: #000000;}
 .todo-p p{
   margin: 0px;
   padding-left: 20px;
-  width: 500px;
-}
+  width: 500px;}
 .list101{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  color: #777777;
-}
+  color: #777777;}
 .list102{
   display: flex;
   justify-content: center;
@@ -864,12 +779,10 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 13px;  
-  color: #4673E4;
-}
+  color: #4673E4;}
 .menu{
   padding-right: 20px;
-  position: relative;
-}
+  position: relative;}
 .todoAction{
   display: none;
   flex-direction: column;
@@ -881,8 +794,7 @@ nav{
   left: 53%;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.09);
-}
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.09);}
 .markAsCompleted,.edit,.delete{
   display: flex;
   gap: 20px;
@@ -891,11 +803,9 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  color: rgba(0, 0, 0, 0.7);
-}
+  color: rgba(0, 0, 0, 0.7);}
 .markAsCompleted{
-  padding-top: 15px;
-}
+  padding-top: 15px;}
 .noTodo_word{
   width: 200px;
   height: 21px;
@@ -905,8 +815,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 18px;  
-  color: rgba(0, 0, 0, 0.13);
-}
+  color: rgba(0, 0, 0, 0.13);}
 #previous{
   display: flex;
   width: 116px;
@@ -919,13 +828,11 @@ nav{
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #leftArrow{
   height: 14px;
   width: 15px;
-  padding-right: 10px;
-}
+  padding-right: 10px;}
 #one{
   display: flex;
   justify-content: center;
@@ -941,8 +848,7 @@ nav{
   font-size: 14px;  
   color: #2468EB;
   background: rgba(36, 104, 235, 0.07);
-  cursor: pointer;
-}
+  cursor: pointer;}
 #two{
   display: flex;
   justify-content: center;
@@ -958,8 +864,7 @@ nav{
   font-size: 14px;  
   color: white;
   background: #2468EB;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #three{
   display: flex;
   justify-content: center;
@@ -975,8 +880,7 @@ nav{
   font-size: 14px;  
   color: white;
   background: #2468EB; 
-  cursor: pointer;
-}
+  cursor: pointer;}
 #next{
   display: flex;
   width: 116px;
@@ -989,13 +893,11 @@ nav{
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-}
+  cursor: pointer;}
 #rightArrow{
   height: 14px;
   width: 15px;
-  padding-left: 10px;
-}
+  padding-left: 10px;}
 #vertical_card{
   display: flex;
   flex-direction: column;
@@ -1006,8 +908,7 @@ nav{
   height: 390px;
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 999px;
-}
+  border-radius: 999px;}
 #all-todo, #backlog, #in-progress, #finished, #overdue, #trash{
   width: 43px;
   height: 19px;
@@ -1015,8 +916,7 @@ nav{
   font-style: normal;
   font-weight: 400;
   font-size: 10px;  
-  color: #444444;
-}
+  color: #444444;}
 #all-todo-count, #backlog-count, #in-progress-count, #finished-count, #overdue-count, #trash-count{
   display: flex;
   justify-content: center;
@@ -1027,38 +927,135 @@ nav{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-}
+  font-size: 13px;}
 #all-todo-count{
   top: 34px;
   color: #4673E4;
-  background: rgba(70, 115, 228, 0.06);
-}
+  background: rgba(70, 115, 228, 0.06);}
 #backlog-count{
   top: 98px;
   color: #97A6AE;
-  background: rgba(151, 166, 174, 0.11);
-}
+  background: rgba(151, 166, 174, 0.11);}
 #in-progress{
-  width: 53px;
-}
+  width: 53px;}
 #in-progress-count{
   top: 162px;
   color: #4673E4;
-  background: rgba(70, 115, 228, 0.18);
-}
+  background: rgba(70, 115, 228, 0.18);}
 #finished-count{
   top: 226px;
   color: #28BA63;
-  background: rgba(8, 201, 85, 0.05);
-}
+  background: rgba(8, 201, 85, 0.05);}
 #overdue-count{
   top: 290px;
   color: #C9981A;
-  background: rgba(201, 152, 26, 0.05);
-} 
+  background: rgba(201, 152, 26, 0.05);} 
 #trash-count{
   top: 354px;
   color: #F20101;
-  background: rgba(242, 1, 1, 0.05);
+  background: rgba(242, 1, 1, 0.05);}
+ 
+  /* Links page */
+ 
+.links-nav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  padding: 11px;
+  background-color: white;
+  height: 50px;}
+#linksUserImg{
+  position: absolute;
+  overflow: hidden;
+  right: 80px;
+  top: 19px;
+  width: 30px;
+  height: 30px;
+  background-color: #E5E5E5;
+  border-radius: 50%;}
+#linksUserImg img{
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-width: 100%;}
+.links-container{
+  background: #E5E5E5;
+  padding-top: 72px;
+  height: calc(100vh - 72px );
+  display: grid;
+  grid-template-columns: 1.1fr 4fr;}
+.links-three60{
+  padding-top: 8px;
+  padding-left: 20px;}
+#createLink_div{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 203px;
+  height: 48px;
+  right: 180px;
+  top: 10px;
+  border-radius: 70px 0px;
+  background: #4673E4;
+  color: #EEEEEE;
+  cursor: pointer;}
+.sidebar{
+  background: white;
+  border-radius: 0px 999px 0px 0px;}
+.linksMainContainer{
+  background: #E5E5E5;}
+.linksMain{
+  display: grid;
+  gap: 10px;
+  width: 780px;
+  height: 100%;
+  margin-left: 10%;}
+.linksBookmark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 220px;
+  width: 240px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;}
+.linksBookmark p{
+  width: 180px;}
+.designResources{
+  display: flex;
+  justify-content: space-between;
+  width: 180px;}
+.DesignResDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 30px;
+  color: #4673E4;
+  background: rgba(70, 115, 228, 0.07);
+  border-radius: 30px;}
+.links-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 460px;
+  grid-gap: 20px;}
+.links-heading{
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 775px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;}
+#navlink{
+  text-decoration: none;
 }
