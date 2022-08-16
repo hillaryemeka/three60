@@ -1,33 +1,27 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 html, body, html * {
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: 'Roboto', sans-serif;}
 body{
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 .container{
   position: absolute;
   width: 100vw;
   height: 100vh;
   background: white;
-  overflow: hidden;
-}
+  overflow: hidden;}
 .column {
   float: left;
   width: 50vw;
-  height: 100vh;
-}
+  height: 100vh;}
 .blue{
-  background-color: rgba(26, 77, 230, 0.81);
-}
+  background-color: rgba(26, 77, 230, 0.81);}
 .blue_container{
   position: absolute;
   left: 6.5vw;
   width: 486px;
   height: 418px;
-  top: 20.4vh;
-}
+  top: 20.4vh;}
 .word_container{
   position: absolute;
   width: 339px;
@@ -38,8 +32,7 @@ body{
   line-height: 65px;
   font-style: normal;
   text-align: left;
-  color: #FFFFFF;
-}
+  color: #FFFFFF;}
 .bookmarks{
   position: absolute;
   width: 144px;
@@ -47,14 +40,12 @@ body{
   left: 324px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .bookmark_image_container, .notes_image_container, .todos_image_container{
   display: flex;
   align-items: center;
   height: 105px;
-  padding-left: 5%;
-}
+  padding-left: 5%;}
 .bookmark_image_circle, .notes_image_circle, .todos_image_circle{
   display: flex;
   justify-content: center;
@@ -62,14 +53,12 @@ body{
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: rgba(70, 115, 228, 0.1);
-}
+  background: rgba(70, 115, 228, 0.1);}
 .bookmark_container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 105px;
-}
+  height: 105px;}
 .bookmark_word, .notes_word, .todo_word{
   padding-left: 5%;
   font-family: 'Quattrocento Sans';
@@ -78,8 +67,7 @@ body{
   font-size: 14px;
   line-height: 16px;
   /* identical to box height */
-  color: #5F5F60;
-}
+  color: #5F5F60;}
 .bookmark_circle{
   position: absolute;
   width: 100px;
@@ -87,8 +75,7 @@ body{
   left: 347px;
   top: 98px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.37)
-}
+  background: rgba(255, 255, 255, 0.37)}
 .notes{
   position: absolute;
   width: 144px;
@@ -96,8 +83,7 @@ body{
   left: 162px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .notes_triangle{
   position: absolute;
 	width: 0;
@@ -106,8 +92,7 @@ body{
 	border-right: 50px solid transparent;
 	border-bottom: 50px solid rgba(255, 255, 255, 0.39);
   left: 182px;
-  top: 225px;
-}
+  top: 225px;}
 .todos{
   position: absolute;
   width: 144px;
@@ -115,8 +100,7 @@ body{
   left: 0px;
   top: 155px;
   background: #FFFFFF;
-  border-radius: 5px;
-}
+  border-radius: 5px;}
 .todos_angle{
   position: absolute;
   width: 0;
@@ -125,8 +109,7 @@ body{
 	border-right: 2vw solid transparent;
 	border-top: 7vh solid rgba(36, 104, 235, 0.81);
   left: 84px;
-  top: 155px;
- }
+  top: 155px; }
 .upper_circle{
   position:absolute;
   width: 100px;
@@ -136,8 +119,7 @@ body{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
-              rgba(133, 156, 217, 0.47)
-}
+              rgba(133, 156, 217, 0.47)}
 .lower_circle{
   position: absolute;
   width: 100px;
@@ -147,8 +129,7 @@ body{
   border-radius: 50%;
   background: linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)),
               linear-gradient(0deg, rgba(133, 156, 217, 0.47), rgba(133, 156, 217, 0.47)), 
-            rgba(133, 156, 217, 0.47);
-}
+            rgba(133, 156, 217, 0.47);}
 .article{
   position: absolute;
   width: 456px;
@@ -160,21 +141,17 @@ body{
   font-weight: 400;
   font-size: 14px;
   /* or 22px */
-  color: #FFFFFF;
-}
+  color: #FFFFFF;}
 .white{
-  background-color: white;
-}
+  background-color: white;}
 .white_container{
   position: absolute;
   width: 384px;
   height: 560px;
   left: 60.3%;
-  top: 5%;
-}
+  top: 5%;}
 .hiding{
-  display: none;
-}
+  display: none;}
 .show{
   position: absolute;
   display: block;
@@ -183,8 +160,7 @@ body{
   font-family: 'Rubik';
   font-weight: 400;
   font-size: 16px;
-  color: #2468EB;
-}
+  color: #2468EB;}
 .white_logo{
   display: flex;
   justify-content: center;
@@ -193,20 +169,17 @@ body{
   height: 50px;
   padding: 2px 2px 1px 3px;
   border-radius: 50%;
-  background: #2468EB;
-}
+  background: #2468EB;}
 .three60{
   position: absolute;
   left: 60px;
-  top: 11px;
- }
+  top: 11px; }
 #three60{
   display: block;
   font-family: 'Rubik';
   font-weight: 500;
   font-size: 24px;
-  color: #2468EB;
-}
+  color: #2468EB;}
 .create_act{
   position: absolute;
   top: 68px;
@@ -214,8 +187,7 @@ body{
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  color: #000000;
-}
+  color: #000000;}
 ::placeholder{
   font-family: 'Roboto';
   font-style: normal;
@@ -223,8 +195,7 @@ body{
   font-size: 14px;
   line-height: 16px;
   color: #C2C4CB;
-  padding-left: 10px;
-}
+  padding-left: 10px;}
 #first_name_label{
   position: absolute;
   top: 110px;
@@ -233,8 +204,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #first_name{
   box-sizing: border-box;
   position: absolute;
@@ -243,13 +213,11 @@ body{
   top: 130px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #first_name_msg{
   position: absolute;
   top: 169px;
-  color: red;
-}
+  color: red;}
 #last_name_label{
   position: absolute;
   top: 183px;
@@ -258,8 +226,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #last_name{
   box-sizing: border-box;
   position: absolute;
@@ -268,13 +235,11 @@ body{
   top: 205px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #last_name_msg{
   position: absolute;
   top: 246px;
-  color: red;
-}
+  color: red;}
 #email_label{
   position: absolute;
   top: 259px;
@@ -283,8 +248,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #email{
   box-sizing: border-box;
   position: absolute;
@@ -293,13 +257,11 @@ body{
   top: 279px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #email_msg{
   position: absolute;
   top: 317px;
-  color: red;
-}
+  color: red;}
 #pwd_label{
   position: absolute;
   top: 331px;
@@ -308,8 +270,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089; }
  #pwd{
   box-sizing: border-box;
   position: absolute;
@@ -318,13 +279,11 @@ body{
   top: 348px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
- }
+  border-radius: 3px; }
  #pwd_msg{
   position: absolute;
   top: 386px;
-  color: red;
- }
+  color: red; }
  #confirmPwd_label{
   position: absolute;
   top: 396px;
@@ -333,8 +292,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089; }
  #confirmPwd{
   box-sizing: border-box;
   position: absolute;
@@ -343,13 +301,11 @@ body{
   top: 416px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #confirmPwd_msg{
   position: absolute;
   top: 452px;
-  color: red;
- }
+  color: red; }
  #signUp_btn{
   position: absolute;
   width: 384px;
@@ -358,8 +314,7 @@ body{
   background: #2468EB;
   border-radius: 3px;
   color: white;
-  border: none;
- }
+  border: none; }
  .google_btn{
   box-sizing: border-box;
   position: absolute;
@@ -369,8 +324,7 @@ body{
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
-  border: transparent;
- }
+  border: transparent; }
  #ggl_link{
   position: absolute;
   left: 38%;
@@ -378,23 +332,18 @@ body{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
- }
+  font-size: 14px; }
  #singUpLink, #signInLink{
   color: #2468EB;
-  text-decoration: none;
- }
+  text-decoration: none; }
  #google_img{
   position: absolute;
   left: 31%;
-  top: 35%;
-
- }
+  top: 35%; }
  #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
  #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover,#confirmPwd:hover {
    border: 3px solid rgb(0, 153, 255);
-   transform: scale(1.01);
- }
+   transform: scale(1.01); }
  .sign_in{
   position: absolute;
   top: 550px;
@@ -402,8 +351,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
- }
+  color: #000000; }
  .terms{
   position: absolute;
   left: 60.5%;
@@ -412,8 +360,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 1.1vw;
-  color: #979BA9;
- }
+  color: #979BA9; }
  #signIn_email_label{
   position: absolute;
   top: 118px;
@@ -422,8 +369,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
-}
+  color: #7D8089;}
 #signIn_email{
   box-sizing: border-box;
   position: absolute;
@@ -432,13 +378,11 @@ body{
   top: 137px;
    background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
-}
+  border-radius: 3px;}
 #signIn_email_msg{
   position: absolute;
   top: 185px;
-  color: red;
-}
+  color: red;}
 #signIn_pwd_label{
   position: absolute;
   top: 207px;
@@ -447,8 +391,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089;
- }
+  color: #7D8089; }
  #signIn_pwd{
   box-sizing: border-box;
   position: absolute;
@@ -457,13 +400,11 @@ body{
   top: 227px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px;
- }
+  border-radius: 3px; }
  #signIn_pwd_msg{
   position: absolute;
   top: 277px;
-  color: red;
- }
+  color: red; }
  #signIn_btn{
   position: absolute;
   width: 384px;
@@ -476,8 +417,7 @@ body{
   font-weight: 500;
   font-size: 1.1vw;
   color: #FFFFFF;
-  border: none;
- }
+  border: none; }
  .sign_up{
   position: absolute;
   top: 355px;
@@ -485,8 +425,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
- }
+  color: #000000; }
 
                   /*  HOME   */ 
                  /*  HOME   */ 
@@ -1061,4 +1000,108 @@ nav{
   top: 354px;
   color: #F20101;
   background: rgba(242, 1, 1, 0.05);
+}
+/* Links page */
+ 
+.links-nav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  margin: 0;
+  padding: 11px;
+  background-color: white;
+  height: 50px;}
+#linksUserImg{
+  position: absolute;
+  overflow: hidden;
+  right: 80px;
+  top: 19px;
+  width: 30px;
+  height: 30px;
+  background-color: #E5E5E5;
+  border-radius: 50%;}
+#linksUserImg img{
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  max-width: 100%;}
+.links-container{
+  background: #E5E5E5;
+  padding-top: 72px;
+  height: calc(100vh - 72px );
+  display: grid;
+  grid-template-columns: 1.1fr 4fr;}
+.links-three60{
+  padding-top: 8px;
+  padding-left: 20px;}
+#createLink_div{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 203px;
+  height: 48px;
+  right: 180px;
+  top: 10px;
+  border-radius: 70px 0px;
+  background: #4673E4;
+  color: #EEEEEE;
+  cursor: pointer;}
+.sidebar{
+  background: white;
+  border-radius: 0px 999px 0px 0px;}
+.linksMainContainer{
+  background: #E5E5E5;}
+.linksMain{
+  display: grid;
+  gap: 10px;
+  width: 780px;
+  height: 100%;
+  margin-left: 10%;}
+.linksBookmark{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 220px;
+  width: 240px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;}
+.linksBookmark p{
+  width: 180px;}
+.designResources{
+  display: flex;
+  justify-content: space-between;
+  width: 180px;}
+.DesignResDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 30px;
+  color: #4673E4;
+  background: rgba(70, 115, 228, 0.07);
+  border-radius: 30px;}
+.links-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 460px;
+  grid-gap: 20px;}
+.links-heading{
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  width: 775px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;}
+#navlink{
+  text-decoration: none;
 }
