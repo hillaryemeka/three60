@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Quattrocento+Sans:wght@700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8c73dcca8c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="links-nav">
+    <div class="links-three60"><span id="three60">three60</span></div>
+    <div id="home_todo_block">
+      <i class="fa-solid fa-layer-group"></i>
+      <a id="navlink" href="home.html">Todos</a>
+    </div>
+    <div id="home_notes_block">
+      <i class="fa-regular fa-file"></i>
+      <a id="navlink" href="notes.html">Notes</a>
+    </div>
+    <div id="home_links_block">
+      <i class="fa-solid fa-link"></i>
+      <a id="navlink" href="links.html">Links</a>
+    </div>
+    <div class="createLink">
+      <div id="createLink_div"> <img src="images/plus-circle.png" id="plus_img"> Create New Link</div>
+    </div>
+    <div id="linksUserImg"><img src="images/user.png" onclick="displayUser()"></div>
+    <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
+    <div id="user-details">
+      <div id="hello-user">Hello <span id="user-fname"></span></div>
+      <div id="user-email"></div>
+      <button id="logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+  <div class="links-container">
+    <div class="sidebar"></div>
+    <div class="linksMainContainer">
+      <div class="linksMain">
+        <div class="links-heading">
+          <div>All Bookmarks</div>
+          <div>
+            <img src="images/Group 34.png" alt="">
+            <img src="images/Group 35.png" alt="">
+          </div>
+        </div>
+        <div class="links-content">
+          <div class="linksBookmark">
+            <img src="images/M.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+          <div class="linksBookmark">
+            <img src="images/P.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+          <div class="linksBookmark">
+            <img src="images/M.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+          <div class="linksBookmark">
+            <img src="images/M.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+          <div class="linksBookmark">
+            <img src="images/P.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+          <div class="linksBookmark">
+            <img src="images/M.png" alt="">
+            <p>Create an endpoint to get the list of users available in the database</p> 
+            <div class="designResources">
+              <div class="DesignResDiv">Design Resources</div>
+              <img src="images/menu.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="todosNav">
+          <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
+          <div id="one">1</div>
+          <div id="two">2</div>
+          <div id="three">3</div>
+          <div id="next">Next<img id="rightArrow" src="images/rightArrow.png"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
