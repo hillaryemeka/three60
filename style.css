@@ -452,30 +452,14 @@ nav{
 .homeContainer{
   padding-top: 72px;
   display: grid;
-<<<<<<< HEAD
   grid-template-columns: 3fr 1fr;
   height: calc(100vh - 72px);
 }
-||||||| 2c15dee
-  grid-template-columns: auto 370px;
-  height: calc(100vh - 72px);
-}
-=======
-  grid-template-columns: auto 370px;
-  height: calc(100vh - 72px);}
->>>>>>> 35852a37427024657345e5fbc3eb930c5330a74a
 .main{
-<<<<<<< HEAD
   background-color: #E5E5E5;
   display: grid;
   justify-content: center;
 }
-||||||| 2c15dee
-  background-color: #E5E5E5;
-}
-=======
-  background-color: #E5E5E5;}
->>>>>>> 35852a37427024657345e5fbc3eb930c5330a74a
 .details{
   background-color: white;
   padding-left: 30px;}
@@ -483,44 +467,21 @@ nav{
   display: flex;
   justify-content: space-between;
   width: 730px;
-<<<<<<< HEAD
   margin-left: 13%;
   padding-top: 30px;
 }
-||||||| 2c15dee
-  margin-left: 15%;
-  padding-top: 30px;
-}
-=======
-  margin-left: 15%;
-  padding-top: 30px;}
->>>>>>> 35852a37427024657345e5fbc3eb930c5330a74a
 .todosMain{
   display: flex;
   justify-content: space-between;
   width: 650px;
-<<<<<<< HEAD
-}
-||||||| 2c15dee
-  margin-left: 5%;
-}
-=======
   margin-left: 5%;}
->>>>>>> 35852a37427024657345e5fbc3eb930c5330a74a
 .todosNav{
   display: flex;
   justify-content: space-between;
   width: 420px;
   align-items: center;
-<<<<<<< HEAD
   margin-left: 13%;
 }
-||||||| 2c15dee
-  margin-left: 15%;
-}
-=======
-  margin-left: 15%;}
->>>>>>> 35852a37427024657345e5fbc3eb930c5330a74a
 #home_three60{
   font-family: 'Rubik';
   font-weight: 500;
