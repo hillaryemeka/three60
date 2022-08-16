@@ -452,20 +452,13 @@ nav{
 .homeContainer{
   padding-top: 72px;
   display: grid;
-ft-create-link-page
-  grid-template-columns: 3fr 1frpx;
-  height: calc(100vh - 72px);}
-.main{
-  background-color: #E5E5E5;}
   grid-template-columns: 3fr 1fr;
-  height: calc(100vh - 72px);
-}
+  height: calc(100vh - 72px);}
 .main{
   background-color: #E5E5E5;
   display: grid;
   justify-content: center;
 }
-master
 .details{
   background-color: white;
   padding-left: 30px;}
@@ -473,32 +466,19 @@ master
   display: flex;
   justify-content: space-between;
   width: 730px;
-ft-create-link-page
-  margin-left: 15%;
+  margin-left: 13%;
   padding-top: 30px;}
-  margin-left: 15%;
-  padding-top: 30px;
-}
-master
 .todosMain{
   display: flex;
   justify-content: space-between;
-  width: 650px;
-ft-create-link-page
-  margin-left: 5%;}
-margin-left: 5%;}
- master
+  width: 650px;}
 .todosNav{
   display: flex;
   justify-content: space-between;
   width: 420px;
   align-items: center;
-ft-create-link-page
-  margin-left: 15%;}
+  margin-left: 13%;}
   
-  margin-left: 15%;
-}
-master
 #home_three60{
   font-family: 'Rubik';
   font-weight: 500;
