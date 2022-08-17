@@ -453,8 +453,8 @@ nav{
   padding-top: 72px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  height: calc(100vh - 72px);}
-
+  height: calc(100vh - 72px);
+}
 .main{
   background-color: #E5E5E5;
   display: grid;
@@ -468,7 +468,8 @@ nav{
   justify-content: space-between;
   width: 730px;
   margin-left: 13%;
-  padding-top: 30px;}
+  padding-top: 30px;
+}
 .todosMain{
   display: flex;
   justify-content: space-between;
