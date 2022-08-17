@@ -279,7 +279,7 @@ body{
   top: 348px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px; }
+  border-radius: 3px;}
  #pwd_msg{
   position: absolute;
   top: 386px;
@@ -332,7 +332,7 @@ body{
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px; }
+  font-size: 14px;}
  #singUpLink, #signInLink{
   color: #2468EB;
   text-decoration: none;}
@@ -400,7 +400,7 @@ body{
   top: 227px;
   background: rgba(36, 104, 235, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.11);
-  border-radius: 3px; }
+  border-radius: 3px;}
  #signIn_pwd_msg{
   position: absolute;
   top: 277px;
@@ -999,6 +999,7 @@ nav{
   top: 354px;
   color: #F20101;
   background: rgba(242, 1, 1, 0.05);}
+  
 /* Links page */
  
 .links-nav{
