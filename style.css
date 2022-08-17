@@ -173,7 +173,7 @@ body{
 .three60{
   position: absolute;
   left: 60px;
-  top: 11px; }
+  top: 11px;}
 #three60{
   display: block;
   font-family: 'Rubik';
@@ -270,7 +270,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089; }
+  color: #7D8089;}
  #pwd{
   box-sizing: border-box;
   position: absolute;
@@ -283,7 +283,7 @@ body{
  #pwd_msg{
   position: absolute;
   top: 386px;
-  color: red; }
+  color: red;}
  #confirmPwd_label{
   position: absolute;
   top: 396px;
@@ -292,7 +292,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089; }
+  color: #7D8089;}
  #confirmPwd{
   box-sizing: border-box;
   position: absolute;
@@ -305,7 +305,7 @@ body{
 #confirmPwd_msg{
   position: absolute;
   top: 452px;
-  color: red; }
+  color: red;}
  #signUp_btn{
   position: absolute;
   width: 384px;
@@ -314,7 +314,7 @@ body{
   background: #2468EB;
   border-radius: 3px;
   color: white;
-  border: none; }
+  border: none;}
  .google_btn{
   box-sizing: border-box;
   position: absolute;
@@ -324,7 +324,7 @@ body{
   background: rgba(36, 104, 235, 0.12);
   border-radius: 3px;
   cursor: pointer;
-  border: transparent; }
+  border: transparent;}
  #ggl_link{
   position: absolute;
   left: 38%;
@@ -335,7 +335,7 @@ body{
   font-size: 14px; }
  #singUpLink, #signInLink{
   color: #2468EB;
-  text-decoration: none; }
+  text-decoration: none;}
  #google_img{
   position: absolute;
   left: 31%;
@@ -343,7 +343,7 @@ body{
  #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
  #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover,#confirmPwd:hover {
    border: 3px solid rgb(0, 153, 255);
-   transform: scale(1.01); }
+   transform: scale(1.01);}
  .sign_in{
   position: absolute;
   top: 550px;
@@ -351,7 +351,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000; }
+  color: #000000;}
  .terms{
   position: absolute;
   left: 60.5%;
@@ -360,7 +360,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 1.1vw;
-  color: #979BA9; }
+  color: #979BA9;}
  #signIn_email_label{
   position: absolute;
   top: 118px;
@@ -391,7 +391,7 @@ body{
   font-weight: 500;
   font-size: 14px;
   text-align: right;
-  color: #7D8089; }
+  color: #7D8089;}
  #signIn_pwd{
   box-sizing: border-box;
   position: absolute;
@@ -404,7 +404,7 @@ body{
  #signIn_pwd_msg{
   position: absolute;
   top: 277px;
-  color: red; }
+  color: red;}
  #signIn_btn{
   position: absolute;
   width: 384px;
@@ -417,7 +417,7 @@ body{
   font-weight: 500;
   font-size: 1.1vw;
   color: #FFFFFF;
-  border: none; }
+  border: none;}
  .sign_up{
   position: absolute;
   top: 355px;
@@ -425,7 +425,7 @@ body{
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #000000; }
+  color: #000000;}
 
                   /*  HOME   */ 
                  /*  HOME   */ 
@@ -475,8 +475,7 @@ nav{
 .todosMain{
   display: flex;
   justify-content: space-between;
-  width: 650px;
-}
+  width: 650px;}
 .todosNav{
   display: flex;
   justify-content: space-between;
@@ -999,8 +998,7 @@ nav{
 #trash-count{
   top: 354px;
   color: #F20101;
-  background: rgba(242, 1, 1, 0.05);
-}
+  background: rgba(242, 1, 1, 0.05);}
 /* Links page */
  
 .links-nav{
