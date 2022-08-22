@@ -85,3 +85,15 @@ function todoMenu(count){
     document.querySelector(`.todoMenu-${count}`).style.display = 'none'
   }
 }
+
+// let test = document.getElementById("test").style.display
+
+// function createLink() {
+//   if (test == "none") {
+//     document.getElementById('test').style.display = "block"
+//     console.log("first")
+//   } else{
+//     document.getElementById('test').style.display = "none"
+//     console.log("second")
+//   }
+// }

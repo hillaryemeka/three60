@@ -33,7 +33,7 @@
       </div>
     </a>
     <div class="createLink">
-      <div id="createLink_div"> <img src="images/plus-circle.png" id="plus_img"> Create New Link</div>
+      <div id="createLink_div" onclick="createLink()"> <img src="images/plus-circle.png" id="plus_img"> Create New Link</div>
     </div>
     <div id="linksUserImg"><img src="images/user.png" onclick="displayUser()"></div>
     <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
@@ -114,7 +114,21 @@
       </div>
     </div>
   </div>
+  <div id="darkOverlay"></div>
+  <div id="linksCard_Div">
+    <div class="linksCard">
+      <div class="addLink">Add Link</div>
+      <form action="" id="addLink" method="POST">
+        <input type="text" name="link" id="link" placeholder="Link" >
+        <small id="linkMsg"></small>
+        <input type="text" name="choseFolder" id="choseFolder" placeholder="Chose Folder" >
+        <small id="choseFolderMsg"></small>
+        <input type="submit" value="Add" id="add_btn">
+      </form>
+    </div>
+  </div>
+  <div id="test">This is a test</div>
 
-  <script src="home.js"></script>
+  <script src="links.js"></script>
 </body>
 </html>
