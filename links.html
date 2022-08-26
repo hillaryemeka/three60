@@ -33,11 +33,11 @@
       </div>
     </a>
     <div class="createLink">
-      <div id="createLink_div" onclick="createLink()"> <img src="images/plus-circle.png" id="plus_img"> Create New Link</div>
+      <div id="createLink_div" onclick="toggleModal()"> <img src="images/plus-circle.png" id="plus_img"> Create New Link</div>
     </div>
     <div id="linksUserImg"><img src="images/user.png" onclick="displayUser()"></div>
     <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
-    <div id="user-details">
+    <div class="user-details">
       <div id="hello-user">Hello <span id="user-fname"></span></div>
       <div id="user-email"></div>
       <button id="logout" onclick="logout()">Logout</button>
@@ -114,10 +114,12 @@
       </div>
     </div>
   </div>
-  <div id="darkOverlay"></div>
-  <div id="linksCard_Div">
+  <div class="modal">
     <div class="linksCard">
-      <div class="addLink">Add Link</div>
+      <div class="addLink">
+        <div>Add Link</div>
+        <button onclick="toggleModal()">X</button>
+      </div>
       <form action="" id="addLink" method="POST">
         <input type="text" name="link" id="link" placeholder="Link" >
         <small id="linkMsg"></small>
@@ -127,8 +129,7 @@
       </form>
     </div>
   </div>
-  <div id="test">This is a test</div>
-
+  <script src="home.js"></script>
   <script src="links.js"></script>
 </body>
 </html>
