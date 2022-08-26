@@ -590,7 +590,7 @@ nav{
 #user_img:hover + #userAcount_div{
   display: block;
 }
-#user-details{
+.user-details{
   position: absolute;
   display: none;
   justify-content: center;
