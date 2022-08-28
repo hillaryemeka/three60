@@ -1,4 +1,3 @@
-
 function displayUserDetails() {
 
   const user = JSON.parse(localStorage.getItem("user"))
@@ -21,20 +20,18 @@ function logout() {
 function displayUser() {
   const user = JSON.parse(localStorage.getItem("user"))
   const token = localStorage.getItem("token")
-  let displayBlock = document.getElementById('user-details').style.display
+  let displayBlock = document.querySelector('.user-details')
   document.getElementById('hello-user').innerText = user.firstName +" "+ user.lastName
   document.getElementById('user-email').innerText = user.email
 
-  if (displayBlock == "none") {
-    document.getElementById('user-details').style.display = "flex"
+  if (displayBlock.classList.contains('show')) {
+    displayBlock.classList.remove('show')
   } else{
-    document.getElementById('user-details').style.display = "none"
+    displayBlock.classList.add('show')
   }
 }
 
 function createTask() {
-  const emptyTodo = document.querySelector('.no_todo_div').style.display = 'none'
-  const emptyTodoWord = document.querySelector('.noTodo_word').style.display = 'none'
   const parentUl = document.querySelector('.todo-list-container')
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
@@ -83,5 +80,15 @@ function todoMenu(count){
     document.querySelector(`.todoMenu-${count}`).style.display = 'flex'
   } else {
     document.querySelector(`.todoMenu-${count}`).style.display = 'none'
+  }
+}
+
+function toggleModal() {
+  let modal = document.querySelector('.modal')
+
+  if(modal.classList.contains('show')){
+    modal.classList.remove('show')
+  } else{
+    modal.classList.add('show')
   }
 }
