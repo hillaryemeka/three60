@@ -480,7 +480,7 @@ nav{
   width: 420px;
   align-items: center;
   margin-left: 13%;
-}  
+}
 #home_three60{
   font-family: 'Rubik';
   font-weight: 500;
@@ -488,7 +488,8 @@ nav{
   color: #2468EB;
   top: 11px;
   left: 60px;
-  position: absolute;}
+  position: absolute;
+}
 #home_todo_block{
   position: absolute;
   left: 255px;
