@@ -480,8 +480,7 @@ nav{
   width: 420px;
   align-items: center;
   margin-left: 13%;
-}
-  
+}  
 #home_three60{
   font-family: 'Rubik';
   font-weight: 500;
@@ -575,7 +574,8 @@ nav{
   font-weight: 400;
   font-size: 20px;}
 #user_img:hover + #userAcount_div, #linksUserImg:hover + #userAcount_div{
-  display: block;}
+  display: block;
+}
 .user-details{
   position: absolute;
   display: none;
@@ -1094,17 +1094,6 @@ nav{
   font-size: 13px;
   color: #ffff;
   border: none;
-}
-#test{
-  display: none;
-  position: absolute;
-  top: 72px;
-  left: 70px;
-  background: rgb(79, 32, 32);
-  height: 100px;
-  width: 100px;
-  border-radius: 8px;
-  color: white;
 }
 
 /*  Toggle modal and user */
