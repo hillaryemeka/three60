@@ -153,15 +153,7 @@ body{
   top: 5%;}
 .hiding{
   display: none;}
-.show{
-  position: absolute;
-  display: block;
-  left: 60.3%;
-  top: 2%;
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-size: 16px;
-  color: #2468EB;}
+
 .white_logo{
   display: flex;
   justify-content: center;
@@ -1173,6 +1165,7 @@ nav{
 
 .show{
   display: flex;
+  color: #4673E4;
 }
 .hide{
   display: none;
