@@ -153,10 +153,7 @@ body{
 .hiding{
   display: none;}
 .show{
-  position: absolute;
-  display: block;
-  left: 60.3%;
-  top: 2%;
+  display: flex;
   font-family: 'Rubik';
   font-weight: 400;
   font-size: 16px;
@@ -590,7 +587,7 @@ nav{
 #user_img:hover + #userAcount_div{
   display: block;
 }
-#user-details{
+.user-details{
   position: absolute;
   display: none;
   justify-content: center;
