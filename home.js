@@ -26,10 +26,8 @@ function displayUser() {
   document.getElementById('user-email').innerText = user.email
 
   if (displayBlock.classList.contains('show')) {
-    console.log('clicked')
     displayBlock.classList.remove('show')
   } else{
-    console.log('second')
     displayBlock.classList.add('show')
   }
 }
@@ -83,5 +81,16 @@ function todoMenu(count){
     document.querySelector(`.todoMenu-${count}`).style.display = 'flex'
   } else {
     document.querySelector(`.todoMenu-${count}`).style.display = 'none'
+  }
+}
+function toggleModal() {
+  let modal = document.querySelector('.modal')
+
+  if(modal.classList.contains('show')){
+    console.log('first')
+    modal.classList.remove('show')
+  } else{
+    console.log('Second')
+    modal.classList.add('show')
   }
 }
