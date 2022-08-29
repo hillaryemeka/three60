@@ -152,15 +152,7 @@ body{
   top: 5%;}
 .hiding{
   display: none;}
-.show{
-  position: absolute;
-  display: block;
-  left: 60.3%;
-  top: 2%;
-  font-family: 'Rubik';
-  font-weight: 400;
-  font-size: 16px;
-  color: #2468EB;}
+
 .white_logo{
   display: flex;
   justify-content: center;
@@ -340,7 +332,7 @@ body{
   position: absolute;
   left: 31%;
   top: 35%; }
- #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, 
+ #google_btn:hover, #signUp_btn:hover, #last_name:hover, #pwd:hover, #email:hover, .createNote:hover, 
  #signIn_btn:hover, #first_name:hover, #signIn_email:hover, #signIn_pwd:hover,#confirmPwd:hover {
    border: 3px solid rgb(0, 153, 255);
    transform: scale(1.01);}
@@ -512,7 +504,7 @@ nav{
 #home_todo_block:hover,#home_notes_block:hover,#home_links_block:hover{
   border-bottom: 2px solid #4673E4;
   color: blue;
-} 
+}
 #home_notes_block{
   position: absolute;
   width: 60px;
@@ -1095,6 +1087,7 @@ nav{
 .links-heading{
   padding-top: 60px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 775px;
   font-family: 'Rubik';
@@ -1107,7 +1100,7 @@ nav{
 .notesPageContainer{
   background: #E5E5E5;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  justify-content: center;
   height: calc(100vh - 72px);
   padding-top: 72px;
 }
@@ -1118,10 +1111,10 @@ nav{
   gap: 10px;
   width: 193px;
   height: 48px;
-  margin: 13% 0% 0% 12%; 
   background: #FFFFFF;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 999px 0px;
+  cursor: pointer;
 }
 .notesMain{
   display: grid;
@@ -1233,6 +1226,7 @@ nav{
 
 .show{
   display: flex;
+  color: #4673E4;
 }
 .hide{
   display: none;
