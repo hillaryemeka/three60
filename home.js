@@ -1,4 +1,3 @@
-
 function displayUserDetails() {
 
   const user = JSON.parse(localStorage.getItem("user"))
@@ -37,7 +36,7 @@ function createTask() {
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
     .then((todos) => {
-      const myTodos = todos.slice(0, 5);
+      const myTodos = todos.slice(0, 6);
       let elementString = ""
       let count = 0
       for (let t of myTodos) {
@@ -91,6 +90,16 @@ function toggleModal() {
     modal.classList.remove('show')
   } else{
     console.log('Second')
+    modal.classList.add('show')
+  }
+}
+
+function toggleModal() {
+  let modal = document.querySelector('.modal')
+
+  if(modal.classList.contains('show')){
+    modal.classList.remove('show')
+  } else{
     modal.classList.add('show')
   }
 }
