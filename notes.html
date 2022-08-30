@@ -40,66 +40,76 @@
     </div>
     <div id="user_img"><img src="images/user.png" onclick="displayUser()"></div>
     <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
-    <div id="user-details">
+    <div class="user-details">
       <div id="hello-user">Hello <span id="user-fname"></span></div>
       <div id="user-email"></div>
       <button id="logout" onclick="logout()">Logout</button>
     </div>
   </nav>
   <div class="notesPageContainer">
-    <div class="notes_sidebar">
-      <div class="createNote">
+    <div class="links-heading">
+      <div class="createNote" onclick="toggleModal()">
         <img src="images/plus.png" alt="">
         <div>Create Note</div>
       </div>
+      <div>
+        <img src="images/Group 34.png" alt="">
+        <img src="images/Group 35.png" alt="">
+      </div>
     </div>
-    <div class="notesMain">
-      <div class="links-heading">
-        <div>All Notes</div>
-        <div>
-          <img src="images/Group 34.png" alt="">
-          <img src="images/Group 35.png" alt="">
+    <div class="notesContent">
+      <div class="notesDetails">
+        <div class="notesP">
+          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
+          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
+        </div>
+        <div class="personalNote">
+          <div class="personalNoteDiv">Personal Note</div>
+          <img src="images/menu.png" alt="">
         </div>
       </div>
-      <div class="notesContent">
-        <div class="notesDetails">
-          <div class="notesP">
-            <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-            <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-          </div>
-          <div class="personalNote">
-            <div class="personalNoteDiv">Personal Note</div>
-            <img src="images/menu.png" alt="">
-          </div>
+      <div class="notesDetails">
+        <div class="notesP">
+          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
+          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
         </div>
-        <div class="notesDetails">
-          <div class="notesP">
-            <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-            <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-          </div>
-          <div class="personalNote">
-            <div class="personalNoteDiv">Personal Note</div>
-            <img src="images/menu.png" alt="">
-          </div>
-        </div>
-        <div class="notesDetails">
-          <div class="notesP">
-            <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-            <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-          </div>
-          <div class="personalNote">
-            <div class="personalNoteDiv">Personal Note</div>
-            <img src="images/menu.png" alt="">
-          </div>
+        <div class="personalNote">
+          <div class="personalNoteDiv">Personal Note</div>
+          <img src="images/menu.png" alt="">
         </div>
       </div>
-      <div class="todosNav">
-        <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
-        <div id="one">1</div>
-        <div id="two">2</div>
-        <div id="three">3</div>
-        <div id="next">Next<img id="rightArrow" src="images/rightArrow.png"></div>
+      <div class="notesDetails">
+        <div class="notesP">
+          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
+          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
+        </div>
+        <div class="personalNote">
+          <div class="personalNoteDiv">Personal Note</div>
+          <img src="images/menu.png" alt="">
+        </div>
       </div>
+    </div>
+    <div class="todosNav">
+      <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
+      <div id="one">1</div>
+      <div id="two">2</div>
+      <div id="three">3</div>
+      <div id="next">Next<img id="rightArrow" src="images/rightArrow.png"></div>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="linksCard">
+      <div class="addLink">
+        <div>Create Note</div>
+        <button onclick="toggleModal()">X</button>
+      </div>
+      <form action="" id="addLink" method="POST">
+        <input type="text" name="link" id="link" placeholder="Notes" >
+        <small id="linkMsg"></small>
+        <input type="text" name="choseFolder" id="choseFolder" placeholder="Chose Folder" >
+        <small id="choseFolderMsg"></small>
+        <input type="submit" value="Create" id="add_btn">
+      </form>
     </div>
   </div>
   <script src="home.js"></script>

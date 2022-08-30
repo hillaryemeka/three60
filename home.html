@@ -38,7 +38,7 @@
       </div>
       <div id="user_img"><img src="images/user.png" onclick="displayUser()"></div>
       <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
-      <div id="user-details">
+      <div class="user-details">
         <div id="hello-user">Hello <span id="user-fname"></span></div>
         <div id="user-email"></div>
         <button id="logout" onclick="logout()">Logout</button>
@@ -48,7 +48,7 @@
       <div class="main">
         <div class="head">
           <div id="todo_count_div"><span id="todo_count">0</span>Todos</div>
-          <div id="create_task_div"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
+          <div id="create_task_div" onclick="toggleModal()"> <img src="images/plus-circle.png" id="plus_img"> Create Task</div>
         </div>
         <div class="todosMain">
           <div id="vertical_card">
@@ -112,6 +112,21 @@
           <img src="images/edit-3.png">
           <img src="images/trash-2.png">
         </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="linksCard">
+          <div class="addLink">
+            <div>Create Todo</div>
+            <button onclick="toggleModal()">X</button>
+          </div>
+          <form action="" id="addLink" method="POST">
+            <input type="text" name="link" id="link" placeholder="Title" >
+            <small id="linkMsg"></small>
+            <input type="text" name="choseFolder" id="choseFolder" placeholder="Description" >
+            <small id="choseFolderMsg"></small>
+            <input type="submit" value="Create" id="add_btn">
+          </form>
         </div>
       </div>
     <script src="home.js"></script>
