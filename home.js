@@ -82,6 +82,15 @@ function todoMenu(count){
     document.querySelector(`.todoMenu-${count}`).style.display = 'none'
   }
 }
+function toggleModal() {
+  let modal = document.querySelector('.modal')
+
+  if(modal.classList.contains('show')){
+    modal.classList.remove('show')
+  } else{
+    modal.classList.add('show')
+  }
+}
 
 function toggleModal() {
   let modal = document.querySelector('.modal')

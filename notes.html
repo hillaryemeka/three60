@@ -11,7 +11,7 @@
   <link href="style.css" type="text/css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/8c73dcca8c.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="notesBody">
   <nav>
     <div class="home_white_logo"> 
       <img src="images/three60.png"></div>
@@ -57,8 +57,8 @@
         <img src="images/Group 35.png" alt="">
       </div>
     </div>
-    <div class="notesContent">
-      <div class="notesDetails">
+    <ul class="notesContent">
+      <li class="notesDetails">
         <div class="notesP">
           <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
           <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
@@ -67,8 +67,8 @@
           <div class="personalNoteDiv">Personal Note</div>
           <img src="images/menu.png" alt="">
         </div>
-      </div>
-      <div class="notesDetails">
+      </li>
+      <li class="notesDetails">
         <div class="notesP">
           <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
           <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
@@ -77,8 +77,8 @@
           <div class="personalNoteDiv">Personal Note</div>
           <img src="images/menu.png" alt="">
         </div>
-      </div>
-      <div class="notesDetails">
+      </li>
+      <li class="notesDetails">
         <div class="notesP">
           <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
           <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
@@ -87,8 +87,8 @@
           <div class="personalNoteDiv">Personal Note</div>
           <img src="images/menu.png" alt="">
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
     <div class="todosNav">
       <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
       <div id="one">1</div>
@@ -99,19 +99,20 @@
   </div>
   <div class="modal">
     <div class="linksCard">
-      <div class="addLink">
+      <div class="addNote">
         <div>Create Note</div>
         <button onclick="toggleModal()">X</button>
       </div>
-      <form action="" id="addLink" method="POST">
-        <input type="text" name="link" id="link" placeholder="Notes" >
-        <small id="linkMsg"></small>
-        <input type="text" name="choseFolder" id="choseFolder" placeholder="Chose Folder" >
-        <small id="choseFolderMsg"></small>
-        <input type="submit" value="Create" id="add_btn">
+      <form action="" id="notesForm" method="POST" onsubmit="validateNote(event)">
+        <input type="text" name="title" id="title" placeholder="Title" >
+        <small id="titleMsg"></small>
+        <textarea id="description" name="description" placeholder="Description"></textarea>
+        <small id="descriptionMsg"></small>
+        <input type="submit" value="Create" id="add_btn" >
       </form>
     </div>
   </div>
-  <script src="home.js"></script>
 </body>
+<script src="home.js"></script>
+<script src="notes.js"></script>
 </html>
