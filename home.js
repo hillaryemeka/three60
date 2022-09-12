@@ -86,10 +86,8 @@ function toggleModal() {
   let modal = document.querySelector('.modal')
 
   if(modal.classList.contains('show')){
-    console.log('first')
     modal.classList.remove('show')
   } else{
-    console.log('Second')
     modal.classList.add('show')
   }
 }

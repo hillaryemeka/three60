@@ -1102,8 +1102,8 @@ nav{
 #navlink{
   text-decoration: none;
 }
+#notesBody{  background: #E5E5E5;}
 .notesPageContainer{
-  background: #E5E5E5;
   display: grid;
   justify-content: center;
   height: calc(100vh - 72px);
@@ -1125,8 +1125,10 @@ nav{
   display: grid;
 }
 .notesContent{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  padding-inline-start: 0px;
 }
 .notesDetails{
   display: flex;
@@ -1188,6 +1190,8 @@ nav{
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .linksCard{
+  display: grid;
+  padding-left: 20px;
   width: 380px;
   height: 312px;
   background: #FFFFFF;
@@ -1196,67 +1200,23 @@ nav{
 .addLink{
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px 0px 20px;
+  padding: 20px 20px 0px 0px;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
 }
-#link, #choseFolder{
-  margin: 30px 0px 0px 20px;
-  width: 315px;
-  height: 46px;
-  left: 20px;
-  top: 40px;  
-  background: rgba(228, 230, 236, 0.2);
-  border: 1px solid #E4E7ED;
-  border-radius: 999px;
-}
-#add_btn{
-  margin: 30px 0px 0px 210px;
-  width: 126px;
-  height: 41px;
-  background: #4673E4;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 999px;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  color: #ffff;
-  border: none;
-}
-.modal{
-  display: none;
-  justify-content: center;
-  align-items: center; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.linksCard{
-  width: 380px;
-  height: 312px;
-  background: #FFFFFF;
-  border-radius: 10px;
-}
-.addLink{
+.addNote{
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 0px 20px;
+  margin-bottom: 10px;
   font-family: 'Rubik';
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
+  height: 25px;
 }
 #link, #choseFolder{
-  margin: 30px 0px 0px 20px;
   width: 315px;
   height: 46px;
   left: 20px;
@@ -1265,8 +1225,31 @@ nav{
   border: 1px solid #E4E7ED;
   border-radius: 999px;
 }
+#notesForm{
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+#titleMsg, #descriptionMsg{
+  left: 20px;
+  color: red;
+}
+#title{
+  width: 315px;
+  height: 46px;
+  background: rgba(228, 230, 236, 0.2);
+  border: 1px solid #E4E7ED;
+  border-radius: 999px;
+}
+#description{
+  width: 315px;
+  min-height: 60px;
+  background: rgba(228, 230, 236, 0.2);
+  border: 1px solid #E4E7ED;
+  border-radius: 5px;
+}
 #add_btn{
-  margin: 30px 0px 0px 210px;
+  margin-left: 210px;
   width: 126px;
   height: 41px;
   background: #4673E4;
