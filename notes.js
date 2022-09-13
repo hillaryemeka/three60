@@ -54,7 +54,7 @@ function createNote() {
 function displayNotes(){
   let accessToken = localStorage.getItem("token")
   let containerUl = document.querySelector('.notesContent')
-  fetch('https://my-diary-dev.herokuapp.com/api/v1/entries', {
+  fetch('https://my-diary-dev.herokuapp.com/api/v1/entries?perpage=10', {
     headers: {
       'x-access-token': accessToken
     },
@@ -62,10 +62,9 @@ function displayNotes(){
   })
   .then((resp) => resp.json())
   .then((notes) => {
+    console.log(notes)
     let elementString = ''
-    let count = 0
     for(let n of notes.entries){
-      count++
       const noteElement = 
       `<li class="notesDetails">
         <div class="notesP">
