@@ -11,6 +11,10 @@ function validateNote(event) {
   if (title.value == ""){
     titleMsg.innerText = "Please enter the title of your note"
     title.style.borderColor = "red"
+  }else if (title.value.length < 6){
+    console.log(title.value.length)
+    titleMsg.innerText = "The length of your title cannot be less than 6"
+    title.style.borderColor = "red"
   } else{
     titleMsg.innerText = ""
     title.style.borderColor = "green"
@@ -32,8 +36,7 @@ function createNote() {
     title: formData.get('title'),
     body: formData.get('description')
   }
-  title.value = ""
-  description.value = ""
+
   let accessToken = localStorage.getItem("token")
   fetch('https://my-diary-dev.herokuapp.com/api/v1/entries', {
     headers: {
@@ -46,7 +49,10 @@ function createNote() {
   .then(response => response.json())
   .then(data => {
     if(data.status === 'success') {
+      title.value = ""
+      description.value = ""
       modal.classList.remove('show')
+      displayNotes()
     }    
   })
 }
@@ -65,7 +71,7 @@ function displayNotes(){
     let elementString = ''
     let count = 0
     for(let n of notes.entries){
-      count++
+      count ++
       const noteElement = 
       `<li class="notesDetails">
         <div class="notesP">
@@ -74,7 +80,23 @@ function displayNotes(){
         </div>
         <div class="personalNote">
           <div class="personalNoteDiv">Personal Note</div>
-          <img src="images/menu.png" alt="">
+          <div class="menu">
+            <img src="images/menu.png" alt="" onclick="notesMenu(${count})">
+            <div class="todoAction notesMenu-${count}">
+              <div class="markAsCompleted">
+                <img src="images/Rectangle.png" alt="">
+                <div>Mark as complete</div>
+              </div>
+              <div class="edit"  onclick="editNote()">
+                <img src="images/pen.png" alt="">
+                <div>Edit</div>
+              </div>
+              <div class="delete"  onclick="deleteNote()">
+                <img src="images/delete.png" alt="">
+                <div>delete</div>
+              </div>
+            </div>
+          </div>
         </div>
       </li>`
       elementString += noteElement
@@ -90,7 +112,7 @@ const timeoutEvent = ['click', 'mousemove', 'mousedown', 'keydown']
 function sessionTime(){
   window.addEventListener('DOMContentLoaded', ()=>{
     if(window.location.pathname === '/notes.html') {
-      logoutTimerID = setTimeout(logout, 10000)
+      logoutTimerID = setTimeout(logout, 100000000)
       timeoutEvent.forEach(event => {
         window.addEventListener(event, eventHandler)
       })
@@ -101,11 +123,33 @@ sessionTime()
 
 function eventHandler(){
   clearTimeout(logoutTimerID)
-  logoutTimerID = setTimeout(logout, 10000)
+  logoutTimerID = setTimeout(logout, 100000000)
 }
 
 function logout() {
   localStorage.removeItem('user')
   localStorage.removeItem('token')
   window.location.href = "sign_in.html"
+}
+
+function notesMenu(count){
+  let display = document.querySelector(`.notesMenu-${count}`).style.display
+  if (display == 'none'){
+    document.querySelector(`.notesMenu-${count}`).style.display = 'flex'
+  } else {
+    document.querySelector(`.notesMenu-${count}`).style.display = 'none'
+  }
+}
+
+// function toggleMenu(count) {
+//   let modal = document.querySelectorAll(`.todoAction .notesMenu-${count}`)
+//   if(modal.classList.contains('show')){
+//     modal.classList.remove('show')
+//   } else{
+//     modal.classList.add('show')
+//   }
+// }
+
+function editNote(){
+ console.log("Edit note clicked") 
 }
