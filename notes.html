@@ -80,6 +80,7 @@
       </div>
       <form action="" id="notesForm" method="POST" onsubmit="validateNote(event)">
         <input type="text" name="title" id="title" placeholder="Title" >
+        <input type="hidden" name="id" id="noteId">
         <small id="titleMsg"></small>
         <textarea id="description" name="description" placeholder="Description"></textarea>
         <small id="descriptionMsg"></small>
