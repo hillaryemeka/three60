@@ -1,8 +1,7 @@
-function displayUserDetails() {
 
+function displayUserDetails() {
   const user = JSON.parse(localStorage.getItem("user"))
   const token = localStorage.getItem("token")
-
   if (user && token) {
     document.getElementById('userAcount').innerText = user.firstName
   } else {
@@ -82,16 +81,6 @@ function todoMenu(count){
     document.querySelector(`.todoMenu-${count}`).style.display = 'none'
   }
 }
-function toggleModal() {
-  let modal = document.querySelector('.modal')
-
-  if(modal.classList.contains('show')){
-    modal.classList.remove('show')
-  } else{
-    modal.classList.add('show')
-  }
-}
-
 function toggleModal() {
   let modal = document.querySelector('.modal')
 

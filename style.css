@@ -754,7 +754,7 @@ nav{
   border-radius: 50%;
 }
 .no_notes_div{
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1149,11 +1149,12 @@ nav{
   display: grid;
 }
 .notesContent{
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding-inline-start: 0px;
 }
+li{list-style: none;}
 .notesDetails{
   display: flex;
   flex-direction: column;
