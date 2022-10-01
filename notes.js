@@ -1,5 +1,6 @@
 
 let title = document.getElementById('title')
+let noteId = document.getElementById('noteId')
 let description = document.getElementById('description')
 let titleMsg = document.getElementById('titleMsg')
 let descriptionMsg = document.getElementById('descriptionMsg')
@@ -26,16 +27,23 @@ function validateNote(event) {
   } else{
     descriptionMsg.innerText = ""
     description.style.borderColor = "green"
-    createNote()
+
+   const form = new FormData(document.getElementById("notesForm"))
+
+   if(form.get("id")) {
+    updateNote(form)
+   } else {
+    createNote(form)
+   }
+
   }
 }
 
-function createNote() {
+function createNote(form) {
   let modal = document.querySelector('.modal')
-  let formData = new FormData(notesForm)
   let userObj = {
-    title: formData.get('title'),
-    body: formData.get('description')
+    title: form.get('title'),
+    body: form.get('description')
   }
 
   let accessToken = localStorage.getItem("token")
@@ -58,6 +66,8 @@ function createNote() {
   })
 }
 
+let entries = []
+
 function displayNotes(){
   let accessToken = localStorage.getItem("token")
   let containerUl = document.querySelector('.notesContent')
@@ -77,14 +87,15 @@ function displayNotes(){
   .then((notes) => {
     let elementString = ''
     let count = 0
-    if(notes.entries.length > 0){
+    entries = notes.entries;
+
+    if(entries.length > 0){
       noNotes.style.display = "none"
       containerUl.style.display = "grid"
     } else{
       noNotes.style.display = "flex"
     }
-    for(let n of notes.entries){
-      count ++
+    for(let n of entries){
       const noteElement = 
       `<li class="notesDetails">
         <div class="notesP">
@@ -100,7 +111,7 @@ function displayNotes(){
                 <img src="images/Rectangle.png" alt="">
                 <div>Mark as complete</div>
               </div>
-              <div class="edit"  onclick="editNote(n)">
+              <div class="edit"  onclick="editNote(entries[${count}])">
                 <img src="images/pen.png" alt="">
                 <div>Edit</div>
               </div>
@@ -112,9 +123,10 @@ function displayNotes(){
           </div>
         </div>
       </li>`
+      count ++
       elementString += noteElement
-      containerUl.innerHTML = elementString
     }
+    containerUl.innerHTML = elementString
   })
 }
 displayNotes()
@@ -164,33 +176,18 @@ function notesMenu(count){
 // }
 
 function editNote(note){
-  console.log(note.id)
   toggleModal()
   updateBtn.value = "Update Note"
-  let accessToken = localStorage.getItem("token")
-  fetch(`https://my-diary-dev.herokuapp.com/api/v1/entries/${id}`, {
-    headers: {
-      'Content-Type': 'Application/json',
-      'x-access-token': accessToken
-    },
-    method: 'GET',
-  })
-  .then(response => response.json())
-  .then(data => {
-    title.value = data.dairyEntry.title
-    description.value = data.dairyEntry.body
-    updateBtn.addEventListener('click', (e) => {
-      e.preventDefault()
-      updateNote(id)
-    })
-  })
+  title.value = note.title
+  description.value = note.body
+  noteId.value = note.id
 }
 
-function updateNote(id){
-  let formData = new FormData(notesForm)
+function updateNote(form){
+  const id = form.get("id")
   let userObj = {
-    title: formData.get('title'),
-    body: formData.get('description')
+    title: form.get('title'),
+    body: form.get('description')
   }
   let accessToken = localStorage.getItem("token")
   fetch(`https://my-diary-dev.herokuapp.com/api/v1/entries/${id}`, {
@@ -206,6 +203,7 @@ function updateNote(id){
     if(data.status === 'success') {
       title.value = ""
       description.value = ""
+      let modal = document.querySelector('.modal')
       modal.classList.remove('show')
       displayNotes()
     }    

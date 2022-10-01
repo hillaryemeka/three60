@@ -67,8 +67,8 @@ function createTask() {
         </li>`
         elementString += todoElement
 
-        parentUl.innerHTML = elementString
       }
+      parentUl.innerHTML = elementString
     })
 }
 createTask()
