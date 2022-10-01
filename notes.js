@@ -230,4 +230,3 @@ function deleteNote(id){
   .then(res => res.json())
   .then(() => location.reload())
 }
-
