@@ -39,7 +39,7 @@
       <input type="text" placeholder="Search terms"  id="search_input">
     </div>
     <div id="user_img"><img src="images/user.png" onclick="displayUser()"></div>
-    <div id="userAcount_div">Welcome <span id="userAcount"></span></div>
+    <div id="userAcount_div"><span id="userAcount"></span></div>
     <div class="user-details">
       <div id="hello-user">Hello <span id="user-fname"></span></div>
       <div id="user-email"></div>
@@ -57,38 +57,13 @@
         <img src="images/Group 35.png" alt="">
       </div>
     </div>
-    <ul class="notesContent">
-      <li class="notesDetails">
-        <div class="notesP">
-          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-        </div>
-        <div class="personalNote">
-          <div class="personalNoteDiv">Personal Note</div>
-          <img src="images/menu.png" alt="">
-        </div>
-      </li>
-      <li class="notesDetails">
-        <div class="notesP">
-          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-        </div>
-        <div class="personalNote">
-          <div class="personalNoteDiv">Personal Note</div>
-          <img src="images/menu.png" alt="">
-        </div>
-      </li>
-      <li class="notesDetails">
-        <div class="notesP">
-          <div class="notes-p1">Listen to Burna Boy’s Twice As Tall Album</div>
-          <div class="notes-p2">I listened to all tracks on burna Boy’s album and it was :fire:</div>
-        </div>
-        <div class="personalNote">
-          <div class="personalNoteDiv">Personal Note</div>
-          <img src="images/menu.png" alt="">
-        </div>
-      </li>
-    </ul>
+    <div>
+      <div  class="no_notes_div">
+        <div id="no_todo"><img src="images/no_todos.png"></div>
+        <div class="no_notes_word">No todos at the moment!</div>
+      </div>
+      <ul class="notesContent"></ul>
+    </div>
     <div class="todosNav">
       <div id="previous"><img id="leftArrow" src="images/leftArrow.png">Previous</div>
       <div id="one">1</div>
@@ -105,12 +80,13 @@
       </div>
       <form action="" id="notesForm" method="POST" onsubmit="validateNote(event)">
         <input type="text" name="title" id="title" placeholder="Title" >
+        <input type="hidden" name="id" id="noteId">
         <small id="titleMsg"></small>
         <textarea id="description" name="description" placeholder="Description"></textarea>
         <small id="descriptionMsg"></small>
         <input type="submit" value="Create" id="add_btn" >
       </form>
-    </div>
+    </div> 
   </div>
 </body>
 <script src="home.js"></script>

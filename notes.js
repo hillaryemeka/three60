@@ -1,8 +1,10 @@
 
 let title = document.getElementById('title')
+let noteId = document.getElementById('noteId')
 let description = document.getElementById('description')
 let titleMsg = document.getElementById('titleMsg')
 let descriptionMsg = document.getElementById('descriptionMsg')
+let updateBtn = document.getElementById("add_btn")
 
 
 function validateNote(event) {
@@ -10,6 +12,10 @@ function validateNote(event) {
 
   if (title.value == ""){
     titleMsg.innerText = "Please enter the title of your note"
+    title.style.borderColor = "red"
+  }else if (title.value.length < 6){
+    console.log(title.value.length)
+    titleMsg.innerText = "The length of your title cannot be less than 6"
     title.style.borderColor = "red"
   } else{
     titleMsg.innerText = ""
@@ -21,19 +27,25 @@ function validateNote(event) {
   } else{
     descriptionMsg.innerText = ""
     description.style.borderColor = "green"
-    createNote()
+
+   const form = new FormData(document.getElementById("notesForm"))
+
+   if(form.get("id")) {
+    updateNote(form)
+   } else {
+    createNote(form)
+   }
+
   }
 }
 
-function createNote() {
+function createNote(form) {
   let modal = document.querySelector('.modal')
-  let formData = new FormData(notesForm)
   let userObj = {
-    title: formData.get('title'),
-    body: formData.get('description')
+    title: form.get('title'),
+    body: form.get('description')
   }
-  title.value = ""
-  description.value = ""
+
   let accessToken = localStorage.getItem("token")
   fetch('https://my-diary-dev.herokuapp.com/api/v1/entries', {
     headers: {
@@ -46,26 +58,44 @@ function createNote() {
   .then(response => response.json())
   .then(data => {
     if(data.status === 'success') {
+      title.value = ""
+      description.value = ""
       modal.classList.remove('show')
+      displayNotes()
     }    
   })
 }
 
+let entries = []
+
 function displayNotes(){
   let accessToken = localStorage.getItem("token")
   let containerUl = document.querySelector('.notesContent')
+  let noNotes = document.querySelector('.no_notes_div')
   fetch('https://my-diary-dev.herokuapp.com/api/v1/entries', {
     headers: {
       'x-access-token': accessToken
     },
     method: 'GET',
   })
+  .then((res) => {
+    if(res.ok){console.log("Success")} 
+    else{logout()}
+    return res
+  })
   .then((resp) => resp.json())
   .then((notes) => {
     let elementString = ''
     let count = 0
-    for(let n of notes.entries){
-      count++
+    entries = notes.entries;
+
+    if(entries.length > 0){
+      noNotes.style.display = "none"
+      containerUl.style.display = "grid"
+    } else{
+      noNotes.style.display = "flex"
+    }
+    for(let n of entries){
       const noteElement = 
       `<li class="notesDetails">
         <div class="notesP">
@@ -74,12 +104,29 @@ function displayNotes(){
         </div>
         <div class="personalNote">
           <div class="personalNoteDiv">Personal Note</div>
-          <img src="images/menu.png" alt="">
+          <div class="menu">
+            <img src="images/menu.png" alt="" onclick="notesMenu(${count})">
+            <div class="todoAction notesMenu-${count}">
+              <div class="markAsCompleted">
+                <img src="images/Rectangle.png" alt="">
+                <div>Mark as complete</div>
+              </div>
+              <div class="edit"  onclick="editNote(entries[${count}])">
+                <img src="images/pen.png" alt="">
+                <div>Edit</div>
+              </div>
+              <div class="delete"  onclick="deleteNote(${n.id})">
+                <img src="images/delete.png" alt="">
+                <div>delete</div>
+              </div>
+            </div>
+          </div>
         </div>
       </li>`
+      count ++
       elementString += noteElement
-      containerUl.innerHTML = elementString
     }
+    containerUl.innerHTML = elementString
   })
 }
 displayNotes()
@@ -90,7 +137,7 @@ const timeoutEvent = ['click', 'mousemove', 'mousedown', 'keydown']
 function sessionTime(){
   window.addEventListener('DOMContentLoaded', ()=>{
     if(window.location.pathname === '/notes.html') {
-      logoutTimerID = setTimeout(logout, 10000)
+      logoutTimerID = setTimeout(logout, 100000000)
       timeoutEvent.forEach(event => {
         window.addEventListener(event, eventHandler)
       })
@@ -101,11 +148,85 @@ sessionTime()
 
 function eventHandler(){
   clearTimeout(logoutTimerID)
-  logoutTimerID = setTimeout(logout, 10000)
+  logoutTimerID = setTimeout(logout, 100000000)
 }
 
 function logout() {
   localStorage.removeItem('user')
   localStorage.removeItem('token')
   window.location.href = "sign_in.html"
+}
+
+function notesMenu(count){
+  let display = document.querySelector(`.notesMenu-${count}`).style.display
+  if (display == 'none'){
+    document.querySelector(`.notesMenu-${count}`).style.display = 'flex'
+  } else {
+    document.querySelector(`.notesMenu-${count}`).style.display = 'none'
+  }
+}
+
+// function toggleMenu(count) {
+//   let modal = document.querySelectorAll(`.todoAction .notesMenu-${count}`)
+//   if(modal.classList.contains('show')){
+//     modal.classList.remove('show')
+//   } else{
+//     modal.classList.add('show')
+//   }
+// }
+
+function editNote(note){
+  toggleModal()
+  updateBtn.value = "Update Note"
+  title.value = note.title
+  description.value = note.body
+  noteId.value = note.id
+}
+
+function updateNote(form){
+  const id = form.get("id")
+  let userObj = {
+    title: form.get('title'),
+    body: form.get('description')
+  }
+  let accessToken = localStorage.getItem("token")
+  fetch(`https://my-diary-dev.herokuapp.com/api/v1/entries/${id}`, {
+    headers: {
+      'Content-Type': 'Application/json',
+      'x-access-token': accessToken
+    },
+    method: 'PUT',
+    body: JSON.stringify(userObj)
+  })
+  .then(response => response.json())
+  .then(data => {
+    if(data.status === 'success') {
+      title.value = ""
+      description.value = ""
+      let modal = document.querySelector('.modal')
+      modal.classList.remove('show')
+      displayNotes()
+    }    
+  })
+}
+
+function toggleModal() {
+  let modal = document.querySelector('.modal')
+  if(modal.classList.contains('show')){
+    modal.classList.remove('show')
+  } else{
+    modal.classList.add('show')
+  }
+}
+
+function deleteNote(id){
+  let accessToken = localStorage.getItem("token")
+  fetch(`https://my-diary-dev.herokuapp.com/api/v1/entries/${id}`, {
+    method: "DELETE",
+    headers: {
+      'x-access-token': accessToken
+    }
+  })
+  .then(res => res.json())
+  .then(() => location.reload())
 }
