@@ -475,10 +475,10 @@ nav{
   width: 650px;}
 .todosNav{
   display: flex;
-  justify-content: space-between;
-  width: 420px;
+  justify-content: center;
   align-items: center;
-  margin-left: 13%;
+  width: 100%;
+  gap: 20px;
 }
 #home_three60{
   font-family: 'Rubik';
@@ -752,6 +752,30 @@ nav{
   height: 200px;
   background-color: rgba(36, 104, 235, 0.13);
   border-radius: 50%;
+}
+.no_notes_div{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#no_notes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(36, 104, 235, 0.13);
+  border-radius: 50%;
+}
+.no_notes_word{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;  
+  color: rgba(0, 0, 0, 0.13);
 }
 .showTodo{
   display: block;
@@ -1125,11 +1149,12 @@ nav{
   display: grid;
 }
 .notesContent{
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   padding-inline-start: 0px;
 }
+li{list-style: none;}
 .notesDetails{
   display: flex;
   flex-direction: column;
@@ -1261,6 +1286,9 @@ nav{
   font-size: 13px;
   color: #ffff;
   border: none;
+}
+.markAsCompleted:hover, .edit:hover, .delete:hover{
+  color: blue;
 }
 
 /*  Toggle modal and user */
